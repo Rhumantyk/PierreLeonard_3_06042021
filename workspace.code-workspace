@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\Cours HTML5 CSS3\\Animation-et-Sass"
+		},
+		{
+			"path": "..\\Projet-2\\Mission\\Site-Maquette"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Site-Maquette"
+	}
+}

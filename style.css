@@ -1,0 +1,190 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p {
+  color: black;
+}
+
+.header-title {
+  font-weight: bold;
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 40%;
+  margin-right: 50%;
+}
+
+.button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  border: none;
+  width: 53%;
+  padding: 11px 0px;
+  border-radius: 30px;
+  color: white;
+}
+
+.discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e1e1e1;
+}
+
+.booking {
+  background-color: #f5f5f5;
+}
+
+.nav-links {
+  list-style-type: none;
+}
+
+.nav-links a:link {
+  text-decoration: none;
+}
+
+.nav-links li {
+  border-radius: 6%;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
+  /*Pas la bonne couleur !*/
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 11px 0px;
+  margin-bottom: 4%;
+  width: 90%;
+}
+
+.nav-links li a {
+  color: black;
+}
+
+.nav-links li a .fas {
+  color: #828282;
+}
+
+.nav-links li a .dot {
+  display: block;
+  background-color: #9356DC;
+  height: 28%;
+  width: 8%;
+  border-radius: 50%;
+  color: white;
+  padding: 5px;
+}
+
+.restaurants {
+  background-color: #f5f5f5;
+  list-style-type: none;
+}
+
+.restaurants a:link {
+  text-decoration: none;
+}
+
+.restaurants .fa-heart:before {
+  color: black;
+}
+
+.restaurants-cards > div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.restaurants-cards > div img {
+  border-radius: 6% 6% 0% 0%;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.restaurants-cards > div > div {
+  width: 100%;
+  border-radius: 0% 0% 6% 6%;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  background-color: white;
+}
+
+.restaurants-cards > div > div div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+footer .about {
+  list-style-type: none;
+}
+
+footer .about a:link {
+  text-decoration: none;
+}
+
+footer p, footer a {
+  color: white;
+}
+
+footer .fas {
+  color: white;
+  padding-right: 1%;
+}
+
+footer .fa-ustensils, footer .icone-sentence {
+  padding-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,125 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section {
+  background-color: #f5f5f5;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 9%;
+}
+
+.restaurant h1 {
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 3.5%;
+}
+
+.starters h3, .courses h3, .deserts h3 {
+  border-bottom: #99E2D0 solid 3px;
+  width: 53px;
+  /* media query, faudra autre solution ou pas ? */
+  padding-bottom: 2%;
+}
+
+.dishes__box {
+  border-radius: 6%;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
+  /*Pas la bonne couleur !*/
+  background-color: white;
+}
+
+.dishes__menu {
+  font-weight: bold;
+}
+
+.dishes__detailed-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  border: none;
+  width: 53%;
+  padding: 11px 0px;
+  border-radius: 30px;
+  color: white;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+footer .about {
+  list-style-type: none;
+}
+
+footer .about a:link {
+  text-decoration: none;
+}
+
+footer p, footer a {
+  color: white;
+}
+
+footer .fas {
+  color: white;
+  padding-right: 1%;
+}
+
+footer .fa-ustensils, footer .icone-sentence {
+  padding-left: 5px;
+}
+/*# sourceMappingURL=style-french.css.map */

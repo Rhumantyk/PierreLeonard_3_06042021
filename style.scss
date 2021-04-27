@@ -1,0 +1,138 @@
+// Mixins
+@import "mixins-index.scss";
+@import "mixins.scss";
+
+// Les @extend ... Bof, préférer les @mixins
+
+// Variables 
+
+
+// Page
+body
+{
+	background-color: white;
+	margin:0;
+	padding:0;
+	overflow-x: hidden;  
+}
+
+p
+{
+    color: black;
+}
+
+.header-title
+{
+    @include header-title;
+}
+
+.button
+{
+    @include btn;
+}
+
+.discover
+{
+    display: flex;
+    flex-direction: column;
+}
+
+$location-bg: #f5f5f5;
+
+.location
+{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: darken($location-bg, 8%);
+}
+
+.booking
+{
+    @include background-color;
+}
+
+.nav-links
+{
+    @include nolists;
+    li
+    {
+        @include radius-shadow;
+        @include background-color;
+        display: flex;
+        flex-direction: row;
+        padding: 11px 0px;
+        margin-bottom: 4%;
+        width: 90%;
+        a
+        {
+            color: black;
+            
+            .fas
+            {
+                color: darken($location-bg, 45%);
+            }
+            
+            .dot
+            {
+                display: block;
+                background-color:#9356DC; 
+                height: 28%;
+                width: 8%;
+                border-radius: 50%;
+                color: white;
+                padding: 5px;
+            }
+        } 
+    }
+}
+
+.restaurants
+{
+    @include background-color; 
+    @include nolists;
+    .fa-heart:before
+    {
+        color: black;
+    } 
+}
+
+
+.restaurants-cards /* C'est pas un peu lourd ? */
+{
+    > div /* enfants directs de .restaurant-cards */
+    {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        // background-color: blue;
+        img
+        {
+            @include border-radius-img-index;
+            width: 100%;
+            object-fit: contain;
+        }
+        > div /* idem */
+        {   
+            width: 100%;
+            @include border-radius-information-index;
+            div:nth-child(1)
+            {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                // background-color: red;
+            }
+        }
+    }
+}
+
+// Footer 
+footer
+{
+    @include footer;
+}

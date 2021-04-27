@@ -1,0 +1,87 @@
+// Mixins
+@import "mixins-palette.scss";
+@import "../mixins.scss";
+
+// Variables
+$noliststyle: none; /*Exemple. À enlever quand il y en aura d'autres*/
+
+// Page
+body
+{
+	background-color: white;
+	margin:0;
+	padding:0;
+	overflow-x: hidden; 
+}
+
+header div
+{
+    display: flex;
+    flex-direction: row;
+}
+
+section
+{
+    @include background-color; 
+}
+
+img
+{
+    width: 100%;  
+    object-fit: contain;
+}
+
+.restaurant
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & i
+    {
+        display: flex;
+        align-items: center;
+        padding-right: 9%;
+    }
+    & h1
+    {
+        font-style: italic;
+        font-weight: bold;
+        padding-left: 3.5%;
+    }
+}
+
+.starters h3, .courses h3, .deserts h3
+{
+    border-bottom: #99E2D0 solid 3px;
+    width: 53px; /* media query, faudra autre solution ou pas ? */
+    padding-bottom: 2%;
+}
+
+.dishes
+{
+    &__box
+    {
+        @include radius-shadow;
+        background-color: white;
+    }
+    &__menu
+    {
+        font-weight: bold;
+    }
+    &__detailed-price
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.button
+{
+    @include btn;
+}
+
+footer
+{
+    @include footer;
+}
