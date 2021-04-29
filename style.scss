@@ -34,7 +34,7 @@ body
     font-family: Roboto;
 }
 
-h1,h2, h3, header
+h1, h2, h3, header
 {
     font-family: Shrikhand;
 }
@@ -47,6 +47,8 @@ p
 .header-title
 {
     @include header-title;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .button

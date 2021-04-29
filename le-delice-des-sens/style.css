@@ -1,10 +1,51 @@
 @charset "UTF-8";
 /*Exemple. À enlever quand il y en aura d'autres*/
+@font-face /* Logo et titres */ {
+  font-family: Shrikhand;
+  src: url("Fonts/Police/Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face /* Texte */ {
+  font-family: Roboto;
+  src: url("Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: white;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: Roboto;
+}
+
+h1, h2, h3, header {
+  font-family: Shrikhand;
+}
+
+p {
+  color: black;
+}
+
+.header-title {
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  /* Pour centrer */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header div {
@@ -65,8 +106,8 @@ img {
 
 .dishes__box {
   border-radius: 6%;
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
-          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+          box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   background-color: white;
 }
 
@@ -90,8 +131,8 @@ img {
 .button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
-          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+          box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   border: none;
   width: 53%;
   padding: 11px 0px;
