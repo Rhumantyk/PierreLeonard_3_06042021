@@ -58,6 +58,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-top: solid;
+  border-top-color: #c2c2c2;
 }
 
 .location {

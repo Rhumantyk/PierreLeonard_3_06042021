@@ -54,13 +54,17 @@ p
     @include btn;
 }
 
+$location-bg: #f5f5f5;
+
 .discover
 {
     display: flex;
     flex-direction: column;
+    border-top: solid;
+    border-top-color: darken($location-bg, 20%);
 }
 
-$location-bg: #f5f5f5;
+
 
 .location
 { 
