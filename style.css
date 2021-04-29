@@ -29,7 +29,7 @@ p {
 }
 
 .header-title {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,6 +82,14 @@ p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #e1e1e1;
+  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.location i {
+  padding-right: 7%;
 }
 
 .booking {
