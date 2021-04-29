@@ -7,20 +7,20 @@ $noliststyle: none; /*Exemple. À enlever quand il y en aura d'autres*/
 
 // Page
 @font-face /* Logo et titres */
-{
-    font-family: Shrikhand;
-    src: url('Fonts/Police/Shrikhand-Regular.otf');
-    font-weight: normal;
-    font-style: normal;
-}
+    {
+        font-family: Shrikhand;
+        src: url('Fonts/Police/Shrikhand-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-@font-face /* Texte */
-{
-    font-family: Roboto;
-    src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-    font-weight: normal;
-    font-style: normal;
-}
+    @font-face /* Texte */
+    {
+        font-family: Roboto;
+        src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
 
 body

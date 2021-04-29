@@ -73,7 +73,7 @@ $location-bg: #f5f5f5;
 }
 
 .location
-{ 
+{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,8 +83,8 @@ $location-bg: #f5f5f5;
     font-size: 0.88rem;
     i
     {
-        margin-left: -6%;
-        margin-right: 6%;
+        margin-left: -5%;
+        margin-right: 5%;
         padding-bottom: 2px;
     }
     p
@@ -116,38 +116,63 @@ $location-bg: #f5f5f5;
     }
 }
 
-.nav-links
-{
-    @include nolists;
-    li
+h1
     {
-        @include radius-shadow;
-        @include background-color;
-        display: flex;
-        flex-direction: row;
-        padding: 11px 0px;
-        margin-bottom: 4%;
-        width: 90%;
-        a
+     @include h1-index;   
+    }
+
+.nav
+{
+    .nav-links
+    {
+        @include nolists;
+        li
         {
-            color: black;
-            
-            .fas
+            @include radius-shadow;
+            @include background-color;
+            display: flex;
+            flex-direction: row;
+            padding: 11px 0px;
+            margin-bottom: 4%;
+            width: 90%;
+            a
             {
-                color: darken($location-bg, 45%);
-            }
-            
-            .dot
-            {
-                display: block;
-                background-color:#9356DC; 
-                height: 28%;
-                width: 8%;
-                border-radius: 50%;
-                color: white;
-                padding: 5px;
-            }
-        } 
+                color: black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                > div
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                p, i
+                {
+                    margin-right: 10%;
+                    font-weight: bold;
+                }
+
+                .fas
+                {
+                    color: darken($location-bg, 45%);
+                }
+   
+                .dot
+                {
+                    display: block;
+                    background-color:#9356DC;
+                    width: 100%;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 7px;
+                    font-weight: normal;
+                    margin-left: -74%;
+                }
+                
+            } 
+        }
     }
 }
 

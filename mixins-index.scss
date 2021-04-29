@@ -10,3 +10,8 @@
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
     background-color: white;
 }
+
+@mixin h1-index 
+{
+    padding-left: 5%;  /* En px ou % ? */  
+}

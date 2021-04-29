@@ -57,10 +57,11 @@ p {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   border: none;
-  width: 53%;
+  width: 52%;
   padding: 11px 0px;
   border-radius: 30px;
   color: white;
+  font-size: 1.05rem;
 }
 
 .discover {
@@ -95,8 +96,8 @@ p {
 }
 
 .location i {
-  margin-left: -6%;
-  margin-right: 6%;
+  margin-left: -5%;
+  margin-right: 5%;
   padding-bottom: 2px;
 }
 
@@ -133,15 +134,20 @@ p {
   margin-top: -15px;
 }
 
-.nav-links {
+h1 {
+  padding-left: 5%;
+  /* En px ou % ? */
+}
+
+.nav .nav-links {
   list-style-type: none;
 }
 
-.nav-links a:link {
+.nav .nav-links a:link {
   text-decoration: none;
 }
 
-.nav-links li {
+.nav .nav-links li {
   border-radius: 6%;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -158,22 +164,51 @@ p {
   width: 90%;
 }
 
-.nav-links li a {
+.nav .nav-links li a {
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.nav-links li a .fas {
+.nav .nav-links li a > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-links li a p, .nav .nav-links li a i {
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.nav .nav-links li a .fas {
   color: #828282;
 }
 
-.nav-links li a .dot {
+.nav .nav-links li a .dot {
   display: block;
   background-color: #9356DC;
-  height: 28%;
-  width: 8%;
+  width: 100%;
   border-radius: 50%;
   color: white;
-  padding: 5px;
+  padding: 7px;
+  font-weight: normal;
+  margin-left: -74%;
 }
 
 .restaurants {
