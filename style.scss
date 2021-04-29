@@ -148,17 +148,22 @@ h1
                     align-items: center;
                 }
 
-                p, i
-                {
-                    margin-right: 10%;
-                    font-weight: bold;
-                }
-
                 .fas
                 {
                     color: darken($location-bg, 45%);
                 }
-   
+                
+                i
+                {
+                    margin-right: 10%;
+                    margin-left: 10%;
+                    font-weight: bold;
+                }
+
+                p
+                {
+                    font-weight: bold;
+                }
                 .dot
                 {
                     display: block;
@@ -169,6 +174,11 @@ h1
                     padding: 7px;
                     font-weight: normal;
                     margin-left: -74%;
+                    .dot-text
+                    {
+                        position: initial;
+                        text-align: center;
+                    }
                 }
                 
             } 
