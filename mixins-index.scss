@@ -1,12 +1,12 @@
 @mixin border-radius-img-index
 {
     border-radius: 6% 6% 0% 0%;
-    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, .17);
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
 }
 
 @mixin border-radius-information-index
 {
     border-radius: 0% 0% 6% 6%;
-    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, .17);
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
     background-color: white;
 }

@@ -63,9 +63,8 @@ img {
 
 .dishes__box {
   border-radius: 6%;
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
-          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.3);
-  /*Pas la bonne couleur !*/
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
+          box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.17);
   background-color: white;
 }
 
