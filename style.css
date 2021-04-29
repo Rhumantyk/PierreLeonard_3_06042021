@@ -161,10 +161,11 @@ h1 {
           flex-direction: row;
   padding: 11px 0px;
   margin-bottom: 4%;
-  width: 90%;
+  width: 94%;
 }
 
 .nav .nav-links li a {
+  width: 100%;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +180,7 @@ h1 {
 }
 
 .nav .nav-links li a > div {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,8 +198,8 @@ h1 {
 }
 
 .nav .nav-links li a i {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
   font-weight: bold;
 }
 
@@ -205,7 +207,7 @@ h1 {
   font-weight: bold;
 }
 
-.nav .nav-links li a .dot {
+.nav .nav-links li a .circle {
   display: block;
   background-color: #9356DC;
   width: 100%;
@@ -216,9 +218,13 @@ h1 {
   margin-left: -74%;
 }
 
-.nav .nav-links li a .dot .dot-text {
+.nav .nav-links li a .circle .circle-text {
   position: initial;
   text-align: center;
+}
+
+.nav .nav-links li a .fa-mobile-alt p {
+  margin-left: 2%;
 }
 
 .restaurants {
