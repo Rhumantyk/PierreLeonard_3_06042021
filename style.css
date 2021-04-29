@@ -29,7 +29,7 @@ p {
 }
 
 .header-title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,10 +86,17 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0.88rem;
 }
 
 .location i {
-  padding-right: 7%;
+  margin-left: -6%;
+  margin-right: 6%;
+  padding-bottom: 2px;
+}
+
+.location p {
+  font-weight: bold;
 }
 
 .booking {
