@@ -15,8 +15,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 40%;
-  margin-right: 50%;
+  margin: 0 auto;
+  /* Pour centrer */
 }
 
 .button {
