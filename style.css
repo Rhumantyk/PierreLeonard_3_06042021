@@ -144,7 +144,7 @@ h1 {
   list-style-type: none;
 }
 
-.nav .nav-links a:link {
+.nav .nav-links a:link, .nav .nav-links a:active, .nav .nav-links a:visited {
   text-decoration: none;
 }
 
@@ -233,7 +233,7 @@ h1 {
   list-style-type: none;
 }
 
-.restaurants a:link {
+.restaurants a:link, .restaurants a:active, .restaurants a:visited {
   text-decoration: none;
 }
 
@@ -241,7 +241,7 @@ h1 {
   color: black;
 }
 
-.restaurants-cards > div {
+.restaurants .restaurants-cards > div {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,7 +255,7 @@ h1 {
   margin-right: auto;
 }
 
-.restaurants-cards > div img {
+.restaurants .restaurants-cards > div img {
   border-radius: 6% 6% 0% 0%;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -264,7 +264,7 @@ h1 {
      object-fit: contain;
 }
 
-.restaurants-cards > div > div {
+.restaurants .restaurants-cards > div > div {
   width: 100%;
   border-radius: 0% 0% 6% 6%;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -272,7 +272,7 @@ h1 {
   background-color: white;
 }
 
-.restaurants-cards > div > div div:nth-child(1) {
+.restaurants .restaurants-cards > div > div div:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +304,7 @@ footer .about {
   padding-left: 16px;
 }
 
-footer .about a:link {
+footer .about a:link, footer .about a:active, footer .about a:visited {
   text-decoration: none;
 }
 
