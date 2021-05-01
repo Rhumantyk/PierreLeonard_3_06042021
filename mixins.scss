@@ -32,6 +32,11 @@ $breakpoints: ( /* Utiliser max-witdth */
     margin-bottom: 10px;
 }
 
+@mixin footer-title
+{
+    font-family: Shrikhand;
+}
+
 @mixin nolists
 {
     list-style-type: none;
@@ -48,7 +53,7 @@ $breakpoints: ( /* Utiliser max-witdth */
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
 }
 
-@mixin btn
+@mixin btn-index
 {
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
@@ -61,19 +66,41 @@ $breakpoints: ( /* Utiliser max-witdth */
     font-size: 1.05rem;
 }
 
+@mixin btn-restaurants
+{
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
+    border: none;
+    width: 69%;
+    padding: 6% 0%;
+    margin: 0% 16%;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.05rem;
+    margin-top: 14%;
+    margin-bottom: 22%;
+}
+
 // Footers
 
 @mixin footer
 {
-    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.801);   
         .about
         {
             @include nolists;
+            padding-left: 16px;
         }
 
         p, a
         {
             color: white;
+        }
+
+        p
+        {
+            padding-left: 16px;
+            margin-bottom: -5px;
         }
 
         .fas

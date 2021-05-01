@@ -7,21 +7,20 @@ $noliststyle: none; /*Exemple. À enlever quand il y en aura d'autres*/
 
 // Page
 @font-face /* Logo et titres */
-    {
-        font-family: Shrikhand;
-        src: url('Fonts/Police/Shrikhand-Regular.otf');
-        font-weight: normal;
-        font-style: normal;
-    }
+{
+    font-family: Shrikhand;
+    src: url('Fonts/Police/Shrikhand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face /* Texte */
-    {
-        font-family: Roboto;
-        src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
+@font-face /* Texte */
+{
+    font-family: Roboto;
+    src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body
 {
@@ -85,7 +84,7 @@ img
     }
 }
 
-.starters h3, .courses h3, .deserts h3
+.starters h2, .courses h2, .deserts h2
 {
     border-bottom: #99E2D0 solid 3px;
     width: 53px; /* media query, faudra autre solution ou pas ? */
@@ -113,10 +112,17 @@ img
 
 .button
 {
-    @include btn;
+    @include btn-restaurants;
 }
 
+// Footer 
 footer
 {
+    display: flex;
+    flex-direction: column;
     @include footer;
+    p
+    {
+        @include footer-title;
+    }
 }

@@ -97,7 +97,7 @@ img {
   padding-left: 3.5%;
 }
 
-.starters h3, .courses h3, .deserts h3 {
+.starters h2, .courses h2, .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
   width: 53px;
   /* media query, faudra autre solution ou pas ? */
@@ -134,19 +134,30 @@ img {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   border: none;
-  width: 52%;
-  padding: 11px 0px;
-  border-radius: 30px;
+  width: 69%;
+  padding: 6% 0%;
+  margin: 0% 16%;
+  border-radius: 100px;
   color: white;
   font-size: 1.05rem;
+  margin-top: 14%;
+  margin-bottom: 22%;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: rgba(0, 0, 0, 0.801);
 }
 
 footer .about {
   list-style-type: none;
+  padding-left: 16px;
 }
 
 footer .about a:link {
@@ -157,6 +168,11 @@ footer p, footer a {
   color: white;
 }
 
+footer p {
+  padding-left: 16px;
+  margin-bottom: -5px;
+}
+
 footer .fas {
   color: white;
   padding-right: 1%;
@@ -164,5 +180,9 @@ footer .fas {
 
 footer .fa-ustensils, footer .icone-sentence {
   padding-left: 5px;
+}
+
+footer p {
+  font-family: Shrikhand;
 }
 /*# sourceMappingURL=style.css.map */

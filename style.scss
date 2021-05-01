@@ -24,7 +24,6 @@
         font-style: normal;
     }
 
-
 body
 {
 	background-color: white;
@@ -113,7 +112,7 @@ $location-bg: #f5f5f5;
     }
     .button
     {
-        @include btn;
+        @include btn-index;
     }
 }
 
@@ -237,5 +236,11 @@ h1
 // Footer 
 footer
 {
+    display: flex;
+    flex-direction: column;
     @include footer;
+    p
+    {
+        @include footer-title;
+    }
 }
