@@ -73,9 +73,7 @@ img
         justify-content: space-between;
         & i
         {
-            display: flex;
-            align-items: center;
-            padding-right: 9%;
+            @include fa-heart;
         }
         & h1
         {

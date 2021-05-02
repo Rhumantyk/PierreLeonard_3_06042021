@@ -63,6 +63,15 @@ $breakpoints: ( /* Utiliser max-witdth */
     font-family: Shrikhand;
 }
 
+@mixin fa-heart /* Côté droit Nom du restaurant */
+{
+    display: flex;
+    align-items: center;
+    padding-right: 9%;
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+
 // Mixins titres footers toutes pages
 @mixin footer-title
 {

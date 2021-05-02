@@ -110,6 +110,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 9%;
+  font-size: 1.5em;
+  margin-bottom: 2%;
 }
 
 .restaurant-menus .restaurant h1 {
