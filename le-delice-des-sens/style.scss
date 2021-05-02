@@ -1,9 +1,8 @@
 // Mixins
-@import "mixins-delice.scss";
 @import "../mixins.scss";
+@import "mixins-delice.scss";
 
 // Variables
-$noliststyle: none; /*Exemple. À enlever quand il y en aura d'autres*/
 
 // Page
 @font-face /* Logo et titres */
@@ -31,87 +30,89 @@ body
     font-family: Roboto;
 }
 
-h1, h2, h3, header
-{
-    font-family: Shrikhand;
-}
-
-p
-{
-    color: black;
-}
-
-.header-title
-{
-    @include header-title;
-    flex-direction: row;
-    justify-content: center;
-}
-
 header div
 {
-    display: flex;
-    flex-direction: row;
+    @include header-title-restaurants;
+    
+    a
+    {
+        margin-bottom: 10px;
+        margin-left: 9%;
+    }
+    .header-title
+    {
+        @include header-title;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
 }
 
-section
+h1
 {
-    @include background-color; 
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: Shrikhand;
 }
 
 img
 {
     width: 100%;  
-    object-fit: contain;
+    object-fit:contain;
 }
 
-.restaurant
+.restaurant-menus
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    & i
-    {
-        display: flex;
-        align-items: center;
-        padding-right: 9%;
-    }
-    & h1
-    {
-        font-weight: bold;
-        padding-left: 3.5%;
-    }
-}
-
-.starters h2, .courses h2, .deserts h2
-{
-    border-bottom: #99E2D0 solid 3px;
-    width: 53px; /* media query, faudra autre solution ou pas ? */
-    padding-bottom: 2%;
-}
-
-.dishes
-{
-    &__box
-    {
-        @include radius-shadow;
-        background-color: white;
-    }
-    &__menu
-    {
-        font-weight: bold;
-    }
-    &__detailed-price
+    @include background-color; 
+    @include nolists-restaurants;
+    .restaurant
     {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        & i
+        {
+            display: flex;
+            align-items: center;
+            padding-right: 9%;
+        }
+        & h1
+        {
+            font-weight: bold;
+            padding-left: 3.5%;
+        }
     }
-}
 
-.button
-{
-    @include btn-restaurants;
+    .starters h2, .courses h2, .deserts h2
+    {
+        border-bottom: #99E2D0 solid 3px;
+        width: 53px; /* media query, faudra autre solution ou pas ? */
+        padding-bottom: 2%;
+    }
+
+    .dishes
+    {
+        &__box
+        {
+            @include radius-shadow;
+            background-color: white;
+        }
+        &__menu
+        {
+            font-weight: bold;
+        }
+        &__detailed-price
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .button
+    {
+        @include btn-restaurants;
+    }
 }
 
 // Footer 

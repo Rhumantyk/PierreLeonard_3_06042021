@@ -2,9 +2,7 @@
 @import "../mixins.scss";
 @import "mixin-francaise.scss";
 
-
 // Variables
-
 
 // Page
 @font-face /* Logo et titres */
@@ -43,7 +41,9 @@ header div
     }
     .header-title
     {
-        margin-left: 10%;
+        @include header-title;
+        flex-direction: row;
+        justify-content: center;
     }
     
 }
