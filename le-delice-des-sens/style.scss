@@ -32,20 +32,21 @@ body
 
 header div
 {
-    @include header-title-restaurants;
-    
+    @include header-div;
     a
     {
-        margin-bottom: 10px;
-        margin-left: 9%;
+        @include left-arrow-title;
+        button
+        {
+            background-color: Transparent;
+            border: none;
+            cursor: pointer;
+        } 
     }
     .header-title
     {
-        @include header-title;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
+        @include header-title-restaurants;
+    }   
 }
 
 h1

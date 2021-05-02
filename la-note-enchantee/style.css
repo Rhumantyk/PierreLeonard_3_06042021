@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*Exemple. À enlever quand il y en aura d'autres*/
 @font-face /* Logo et titres */ {
   font-family: Shrikhand;
   src: url("Fonts/Police/Shrikhand-Regular.otf");
@@ -19,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: Roboto;
 }
 
 header div {
@@ -29,10 +28,49 @@ header div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section {
-  background-color: #f5f5f5;
+header div a {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
+
+header div a button {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+}
+
+header div .header-title {
+  font-size: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  margin-right: 5%;
+  font-family: Shrikhand;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: Shrikhand;
 }
 
 img {
@@ -41,7 +79,17 @@ img {
      object-fit: contain;
 }
 
-.restaurant {
+.restaurant-menus {
+  background-color: #f5f5f5;
+  list-style-type: none;
+}
+
+.restaurant-menus a:link, .restaurant-menus a:active, .restaurant-menus a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-menus .restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +102,7 @@ img {
           justify-content: space-between;
 }
 
-.restaurant i {
+.restaurant-menus .restaurant i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,30 +112,30 @@ img {
   padding-right: 9%;
 }
 
-.restaurant h1 {
+.restaurant-menus .restaurant h1 {
   font-weight: bold;
   padding-left: 3.5%;
 }
 
-.starters h2, .courses h2, .deserts h2 {
+.restaurant-menus .starters h2, .restaurant-menus .courses h2, .restaurant-menus .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
   width: 53px;
   /* media query, faudra autre solution ou pas ? */
   padding-bottom: 2%;
 }
 
-.dishes__box {
+.restaurant-menus .dishes__box {
   border-radius: 6%;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   background-color: white;
 }
 
-.dishes__menu {
+.restaurant-menus .dishes__menu {
   font-weight: bold;
 }
 
-.dishes__detailed-price {
+.restaurant-menus .dishes__detailed-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +148,7 @@ img {
           justify-content: space-between;
 }
 
-.button {
+.restaurant-menus .button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);

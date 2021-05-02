@@ -23,26 +23,47 @@ $breakpoints: ( /* Utiliser max-witdth */
     background-color: #f5f5f5;    
 }
 
+// Mixins Titre Ohmyfood
+
+// // Index
 @mixin header-title-index /* Centrage titre */
 {
     font-size: 1.7rem;
     display: flex;
     margin: 0 auto; /* Pour centrer */
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-@mixin header-title-restaurants /* Centrage titre */
+// // Pages restaurants
+@mixin header-div 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin left-arrow-title
+{
+    flex-grow: 0;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+@mixin header-title-restaurants /* Titre */
 {
     font-size: 1.7rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: -15px;
-    margin-bottom: -15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+    flex-grow: 3;
+    margin-right: 5%;
     font-family: Shrikhand;
 }
 
+// Mixins titres footers toutes pages
 @mixin footer-title
 {
     font-family: Shrikhand;
@@ -103,7 +124,7 @@ $breakpoints: ( /* Utiliser max-witdth */
     margin-bottom: 22%;
 }
 
-// Footers
+// Footers toutes pages
 
 @mixin footer
 {
