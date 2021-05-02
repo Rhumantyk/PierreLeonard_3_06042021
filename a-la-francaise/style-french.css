@@ -82,6 +82,7 @@ img {
 .restaurant-menus {
   background-color: #f5f5f5;
   list-style-type: none;
+  border-radius: 30px;
 }
 
 .restaurant-menus a:link, .restaurant-menus a:active, .restaurant-menus a:visited {
@@ -119,6 +120,11 @@ img {
   padding-left: 3.5%;
 }
 
+.restaurant-menus .starters, .restaurant-menus .courses, .restaurant-menus .deserts {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .restaurant-menus .starters h2, .restaurant-menus .courses h2, .restaurant-menus .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
   width: 53px;
@@ -127,13 +133,23 @@ img {
 }
 
 .restaurant-menus .dishes__box {
-  border-radius: 6%;
+  border-radius: 15px;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+  padding-left: 6%;
+  padding-right: 6%;
   background-color: white;
+  margin-bottom: 4%;
 }
 
 .restaurant-menus .dishes__menu {
+  height: 27px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: bold;
 }
 

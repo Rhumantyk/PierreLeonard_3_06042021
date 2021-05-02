@@ -82,6 +82,11 @@ img
         }
     }
 
+    .starters, .courses, .deserts
+    {
+        @include all-menus;
+    }
+
     .starters h2, .courses h2, .deserts h2
     {
         border-bottom: #99E2D0 solid 3px;

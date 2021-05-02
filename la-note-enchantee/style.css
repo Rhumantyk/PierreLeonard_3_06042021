@@ -119,6 +119,11 @@ img {
   padding-left: 3.5%;
 }
 
+.restaurant-menus .starters, .restaurant-menus .courses, .restaurant-menus .deserts {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .restaurant-menus .starters h2, .restaurant-menus .courses h2, .restaurant-menus .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
   width: 53px;

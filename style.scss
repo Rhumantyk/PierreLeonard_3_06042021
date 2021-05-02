@@ -128,7 +128,7 @@ h1
         @include nolists;
         li
         {
-            @include radius-shadow;
+            @include radius-shadow-nav-index;
             @include background-color;
             display: flex;
             flex-direction: row;

@@ -62,10 +62,11 @@ img
     object-fit:contain;
 }
 
-.restaurant-menus
+.restaurant-menus /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
 {
     @include background-color; 
     @include nolists-restaurants;
+    @include br-restaurant-menu;
     .restaurant
     {
         display: flex;
@@ -82,6 +83,11 @@ img
         }
     }
 
+    .starters, .courses, .deserts
+    {
+        @include all-menus;
+    }
+
     .starters h2, .courses h2, .deserts h2
     {
         border-bottom: #99E2D0 solid 3px;
@@ -89,22 +95,19 @@ img
         padding-bottom: 2%;
     }
 
-    .dishes
+    .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
     {
         &__box
         {
-            @include radius-shadow;
-            background-color: white;
+            @include radius-shadow-box;
         }
         &__menu
         {
-            font-weight: bold;
+            @include radius-shadow-menu;
         }
         &__detailed-price
         {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include radius-shadow-detailed-price;
         }
     }
 

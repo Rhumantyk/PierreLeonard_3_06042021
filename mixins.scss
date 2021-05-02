@@ -36,6 +36,11 @@ $breakpoints: ( /* Utiliser max-witdth */
 }
 
 // // Pages restaurants
+@mixin br-restaurant-menu 
+{
+    border-radius: 30px;
+}
+
 @mixin header-div 
 {
     display: flex;
@@ -72,6 +77,12 @@ $breakpoints: ( /* Utiliser max-witdth */
     margin-bottom: 2%;
 }
 
+@mixin all-menus 
+{
+    margin-left: 5%;
+    margin-right: 5%;    
+}
+
 // Mixins titres footers toutes pages
 @mixin footer-title
 {
@@ -99,10 +110,35 @@ $breakpoints: ( /* Utiliser max-witdth */
     }
 }
 
-@mixin radius-shadow
+@mixin radius-shadow-nav-index
 {
-    border-radius: 6%;
+    border-radius: 15px;
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+}
+
+@mixin radius-shadow-box
+{
+    border-radius: 15px; 
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: white;
+    margin-bottom: 4%;
+}
+
+@mixin radius-shadow-menu
+{
+    height: 27px;
+    flex-grow: 1;
+    display: flex;
+    font-weight: bold;
+}
+
+@mixin radius-shadow-detailed-price
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 @mixin btn-index
