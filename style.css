@@ -274,7 +274,7 @@ h1 {
 }
 
 .restaurants .restaurants-cards > div img {
-  border-radius: 6% 6% 0% 0%;
+  border-radius: 15px 15px 0% 0%;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   width: 100%;
@@ -284,10 +284,14 @@ h1 {
 
 .restaurants .restaurants-cards > div > div {
   width: 100%;
-  border-radius: 0% 0% 6% 6%;
+  border-radius: 0% 0% 15px 15px;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   background-color: white;
+}
+
+.restaurants .restaurants-cards > div > div p {
+  font-size: 1.1rem;
 }
 
 .restaurants .restaurants-cards > div > div div:nth-child(1) {
@@ -321,7 +325,7 @@ footer {
 
 footer .about {
   list-style-type: none;
-  padding-left: 16px;
+  padding-left: 5.5%;
 }
 
 footer .about a:link, footer .about a:active, footer .about a:visited {
@@ -333,9 +337,14 @@ footer p, footer a {
 }
 
 footer p {
-  padding-left: 16px;
+  padding-left: 5.5%;
   margin-bottom: -5px;
+  padding-top: 1%;
   font-family: Shrikhand;
+}
+
+footer nav {
+  padding-bottom: 3%;
 }
 
 footer .fas {

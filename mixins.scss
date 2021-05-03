@@ -124,7 +124,7 @@ $breakpoints: ( /* Utiliser max-witdth */
     font-weight: lighter;
 }
 
-@mixin font-weight-menus-title
+@mixin font-weight-title
 {
     font-size: 1.1rem;
 }
@@ -228,7 +228,7 @@ $breakpoints: ( /* Utiliser max-witdth */
         .about
         {
             @include nolists;
-            padding-left: 16px;
+            padding-left: 5.5%;
         }
 
         p, a
@@ -238,7 +238,7 @@ $breakpoints: ( /* Utiliser max-witdth */
 
         p
         {
-            padding-left: 16px;
+            padding-left: 5.5%;
             margin-bottom: -5px;
             padding-top: 1%;
             font-family: Shrikhand;

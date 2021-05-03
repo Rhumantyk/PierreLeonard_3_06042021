@@ -215,7 +215,7 @@ footer {
 
 footer .about {
   list-style-type: none;
-  padding-left: 16px;
+  padding-left: 5.5%;
 }
 
 footer .about a:link, footer .about a:active, footer .about a:visited {
@@ -227,7 +227,7 @@ footer p, footer a {
 }
 
 footer p {
-  padding-left: 16px;
+  padding-left: 5.5%;
   margin-bottom: -5px;
   padding-top: 1%;
   font-family: Shrikhand;

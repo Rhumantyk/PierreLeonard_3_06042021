@@ -220,6 +220,10 @@ h1
             {   
                 width: 100%;
                 @include border-radius-information-index;
+                p
+                {
+                    @include font-weight-title;
+                }
                 div:nth-child(1)
                 {
                     display: flex;
