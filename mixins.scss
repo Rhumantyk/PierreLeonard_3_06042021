@@ -61,7 +61,7 @@ $breakpoints: ( /* Utiliser max-witdth */
     margin-bottom: 2%;
     justify-content: center;
     flex-grow: 3;
-    margin-right: 5%;
+    margin-right: 9%;
     font-family: Shrikhand;
 }
 
@@ -100,7 +100,7 @@ $breakpoints: ( /* Utiliser max-witdth */
 @mixin restaurant-name-title 
 {
     font-weight: bold;
-    padding-left: 3.5%;
+    padding-left: 5.5%;
 }
 
 @mixin starters-margin-top

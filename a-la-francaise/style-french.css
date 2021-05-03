@@ -63,7 +63,7 @@ header div .header-title {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
-  margin-right: 5%;
+  margin-right: 9%;
   font-family: Shrikhand;
 }
 
@@ -126,7 +126,7 @@ img {
 
 .restaurant-menus .restaurant h1 {
   font-weight: bold;
-  padding-left: 3.5%;
+  padding-left: 5.5%;
 }
 
 .restaurant-menus .starters {
