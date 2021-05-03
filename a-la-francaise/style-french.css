@@ -75,8 +75,8 @@ h1 {
 
 img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .restaurant-menus {
