@@ -195,10 +195,11 @@ h1
 {
     @include background-color; 
     @include nolists;
-    .fa-heart:before
+    i
     {
-        color: black;
-    } 
+        @include fa-heart;
+    }
+
     .restaurants-cards
     {
         > div /* enfants directs de .restaurant-cards */
@@ -237,8 +238,8 @@ footer
     display: flex;
     flex-direction: column;
     @include footer;
-    p
-    {
-        @include footer-title;
-    }
+    // p
+    // {
+    //     // @include footer-title;
+    // }
 }

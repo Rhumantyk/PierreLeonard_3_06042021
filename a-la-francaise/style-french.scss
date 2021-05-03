@@ -41,11 +41,11 @@ header div
             background-color: Transparent;
             border: none;
             cursor: pointer;
-        } 
+        }
     }
     .header-title
     {
-        @include header-title-restaurants;
+        @include header-title;
     }   
 }
 
@@ -69,30 +69,29 @@ img
     @include br-restaurant-menu;
     .restaurant
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include restaurant-name;
         & i
         {
             @include fa-heart;
         }
         & h1
         {
-            font-weight: bold;
-            padding-left: 3.5%;
+            @include restaurant-name-title;
         }
+    }
+
+    .starters
+    {
+        @include starters-margin-top;
     }
 
     .starters, .courses, .deserts
     {
         @include all-menus;
-    }
-
-    .starters h2, .courses h2, .deserts h2
-    {
-        border-bottom: #99E2D0 solid 3px;
-        width: 53px; /* media query, faudra autre solution ou pas ? */
-        padding-bottom: 2%;
+        h2
+        {
+            @include border-bottom-h2;
+        }
     }
 
     .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
@@ -104,6 +103,10 @@ img
         &__menu
         {
             @include radius-shadow-menu;
+            p
+            {
+                @include font-weight-menus-title;
+            }
         }
         &__detailed-price
         {
@@ -120,11 +123,5 @@ img
 // Footer 
 footer
 {
-    display: flex;
-    flex-direction: column;
     @include footer;
-    p
-    {
-        @include footer-title;
-    }
 }
