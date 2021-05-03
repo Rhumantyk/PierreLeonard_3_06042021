@@ -67,6 +67,7 @@ img
     @include background-color; 
     @include nolists-restaurants;
     @include br-restaurant-menu;
+    @include img-hidden;
     .restaurant
     {
         @include restaurant-name;

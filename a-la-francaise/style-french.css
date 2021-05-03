@@ -83,6 +83,9 @@ img {
   background-color: #f5f5f5;
   list-style-type: none;
   border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -15%;
 }
 
 .restaurant-menus a:link, .restaurant-menus a:active, .restaurant-menus a:visited {
@@ -140,7 +143,7 @@ img {
 
 .restaurant-menus .starters h2, .restaurant-menus .courses h2, .restaurant-menus .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
-  width: 53px;
+  width: 41px;
   padding-bottom: 2%;
   padding-top: 10%;
   font-size: initial;

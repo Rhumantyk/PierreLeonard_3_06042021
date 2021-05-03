@@ -195,6 +195,10 @@ h1
 {
     @include background-color; 
     @include nolists;
+    p
+        {
+            @include space-p-restaurants;
+        }
     i
     {
         @include fa-heart;

@@ -238,6 +238,10 @@ h1 {
   text-decoration: none;
 }
 
+.restaurants p {
+  padding-left: 4%;
+}
+
 .restaurants i {
   display: -webkit-box;
   display: -ms-flexbox;
