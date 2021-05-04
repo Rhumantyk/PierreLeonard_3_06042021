@@ -139,6 +139,7 @@ p {
 h1 {
   padding-left: 5%;
   /* En px ou % ? */
+  padding-top: 12%;
 }
 
 .nav .nav-links {
@@ -232,6 +233,7 @@ h1 {
 .restaurants {
   background-color: #f5f5f5;
   list-style-type: none;
+  padding-bottom: 10%;
 }
 
 .restaurants a:link, .restaurants a:active, .restaurants a:visited {
@@ -334,7 +336,7 @@ h1 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 80px;
+  height: 69px;
 }
 
 .restaurants .restaurants-cards > div .test p:nth-child(1) {
@@ -343,23 +345,23 @@ h1 {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  margin-top: 12px;
+  margin-top: 11px;
 }
 
 .restaurants .restaurants-cards > div .test i:nth-child(2) {
-  width: 5%;
+  width: 0%;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin-top: -23px;
+  margin-top: -28px;
 }
 
 .restaurants .restaurants-cards > div .test p:nth-child(3) {
-  width: 79%;
+  width: 83%;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  margin-top: -23px;
+  margin-top: -16px;
 }
 
 footer {

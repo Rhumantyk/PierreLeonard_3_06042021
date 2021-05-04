@@ -87,7 +87,7 @@ $breakpoints: ( /* Utiliser max-witdth */
 // // // .restaurant-menus
 @mixin br-restaurant-menu 
 {
-    border-radius: 30px;
+    border-radius: 30px 30px 0px 0px;
 }
 
 @mixin img-hidden

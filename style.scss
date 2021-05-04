@@ -195,6 +195,7 @@ h1
 {
     @include background-color; 
     @include nolists;
+    padding-bottom: 10%;
     p
         {
             @include space-p-restaurants;
@@ -250,24 +251,24 @@ h1
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                height: 80px;
+                height: 69px;
                 p:nth-child(1)
                 {
                     flex-basis: 100%;
                     order: 1;
-                    margin-top: 12px;
+                    margin-top: 11px;
                 }
                 i:nth-child(2)
                 {
-                    width: 5%;
+                    width: 0%;
                     order: 2;
-                    margin-top: -23px;
+                    margin-top: -28px;
                 }
                 p:nth-child(3)
                 {
-                    width: 79%;
+                    width: 83%;
                     order: 1;
-                    margin-top: -23px;
+                    margin-top: -16px;
                 }
             }
         }
