@@ -208,16 +208,18 @@ h1
     {
         > div /* enfants directs de .restaurant-cards */
         {
-            width: 90%;
             display: flex;
             flex-direction: column;
-            margin-bottom: 4%;
+            width: calc(100% - 10%);
+            max-width: 383px;
+            margin-bottom: 5%;
             margin-left: auto;
             margin-right: auto;
             img
             {
                 @include border-radius-img-index;
                 width: 100%;
+                height: 216px;
                 object-fit: cover;
             }
             > div /* idem */
@@ -234,6 +236,11 @@ h1
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
+                    height: 43px;
+                }
+                div:nth-child(2)
+                {
+                    height: 30px;
                 }
             }
         }
@@ -246,8 +253,4 @@ footer
     display: flex;
     flex-direction: column;
     @include footer;
-    // p
-    // {
-    //     // @include footer-title;
-    // }
 }
