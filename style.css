@@ -167,6 +167,14 @@ h1 {
   width: 94%;
 }
 
+.nav .nav-links li:hover {
+  background-color: rgba(147, 86, 220, 0.12);
+}
+
+.nav .nav-links li:hover .fas {
+  color: #9356DC;
+}
+
 .nav .nav-links li a {
   width: 100%;
   color: black;
