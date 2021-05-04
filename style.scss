@@ -243,6 +243,33 @@ h1
                     height: 30px;
                 }
             }
+
+            .test
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                height: 80px;
+                p:nth-child(1)
+                {
+                    flex-basis: 100%;
+                    order: 1;
+                    margin-top: 12px;
+                }
+                i:nth-child(2)
+                {
+                    width: 5%;
+                    order: 2;
+                    margin-top: -23px;
+                }
+                p:nth-child(3)
+                {
+                    width: 79%;
+                    order: 1;
+                    margin-top: -23px;
+                }
+            }
         }
     }
 }
