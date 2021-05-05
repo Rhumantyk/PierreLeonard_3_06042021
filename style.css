@@ -304,7 +304,7 @@ h1 {
 }
 
 .restaurants .restaurants-cards > div .new {
-  width: 27%;
+  width: 28%;
   height: 30px;
   margin: 0;
   padding: 0;
@@ -320,7 +320,9 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: yellowgreen;
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bold;
 }
 
 .restaurants .restaurants-cards > div > div {
@@ -398,7 +400,7 @@ h1 {
 }
 
 .restaurants .restaurants-cards .div-1 {
-  margin-bottom: 7%;
+  margin-bottom: 6%;
 }
 
 .restaurants .restaurants-cards .div-2 {
@@ -411,7 +413,7 @@ h1 {
           flex-direction: column;
   width: calc(100% - 10%);
   max-width: 383px;
-  margin-bottom: 7%;
+  margin-bottom: 6%;
   margin-left: auto;
   margin-right: auto;
 }
