@@ -118,13 +118,12 @@ img {
   margin-bottom: 2%;
 }
 
-.restaurant-menus .restaurant i.fa-heart::before {
-  color: black;
+.restaurant-menus .restaurant i::before {
+  background-color: #f5f5f5;
 }
 
-.restaurant-menus .restaurant i.fa-heart:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+.restaurant-menus .restaurant i:hover::before {
+  color: red;
 }
 
 .restaurant-menus .restaurant h1 {

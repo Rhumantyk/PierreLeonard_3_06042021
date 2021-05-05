@@ -72,15 +72,41 @@ $breakpoints: ( /* Utiliser max-witdth */
     padding-right: 9%;
     font-size: 1.5em;
     margin-bottom: 2%;
-    &.fa-heart::before
+    background-color: transparent;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    
+    // stroke: white;
+//   stroke-width: 30px;
+//     &::before
+//     {
+//         color: black;
+//         // border-radius: 60% 60% 0% 0%;
+// //   border: 1px solid black;
+//         // stroke: black;
+// //   stroke-width: 10;
+//         // background-color: black;
+//         // color: linear-gradient(#FF79DA, #9356DC);
+//         // background: white; /* +++ */
+//         // text-shadow: 0 0 3px #000;
+//         // -webkit-background-clip: text;
+//         // -webkit-text-fill-color: transparent;
+//     } 
+    &:hover
     {
-        color: black;
-    }
-    &.fa-heart:hover
-    {
+        color: linear-gradient(#9356DC, #FF79DA);
+        background: linear-gradient(#9356DC, #FF79DA); /* +++ */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0px black;
+
+        // &::before
+        // {
         // color: linear-gradient(#FF79DA, #9356DC);
-        // background-color: linear-gradient(#FF79DA, #9356DC);
-        background: linear-gradient(#FF79DA, #9356DC); 
+        // background: -webkit-gradient linear-gradient(#FF79DA, #9356DC);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // } 
     }
 }
 
