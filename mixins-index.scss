@@ -14,7 +14,8 @@
 @mixin h1-index 
 {
     padding-left: 5%;  /* En px ou % ? */ 
-    padding-top: 12%; 
+    padding-top: 12%;
+    margin-bottom: -2%;
 }
 
 @mixin space-p-restaurants
