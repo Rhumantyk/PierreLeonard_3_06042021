@@ -9,20 +9,20 @@
 
 // Page
 @font-face /* Logo et titres */
-    {
-        font-family: Shrikhand;
-        src: url('Fonts/Police/Shrikhand-Regular.otf');
-        font-weight: normal;
-        font-style: normal;
-    }
+{
+    font-family: Shrikhand;
+    src: url('Fonts/Police/Shrikhand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face /* Texte */
-    {
-        font-family: Roboto;
-        src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face /* Texte */
+{
+    font-family: Roboto;
+    src: url('Fonts/Police/web fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body
 {
@@ -36,6 +36,8 @@ body
 header
 {
     font-family: Shrikhand;
+    display: flex;
+    justify-content: space-around;
 }
 
 h1
@@ -49,14 +51,14 @@ p
     color: black;
 }
 
-.header-title
+.link-title
 {
-    @include header-title-index;
-    flex-direction: row;
-    justify-content: center;
+    @include link-title;
+    .header-title
+    {
+        @include header-title-index;
+    }
 }
-
-
 
 $location-bg: #f5f5f5;
 
@@ -228,7 +230,7 @@ h1
             {
                 @include border-radius-img-index;
                 width: 100%;
-                height: 216px;
+                height: 174px;
                 object-fit: cover;
             }
             .new

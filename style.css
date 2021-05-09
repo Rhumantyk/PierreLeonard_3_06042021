@@ -22,6 +22,11 @@ body {
 
 header {
   font-family: Shrikhand;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 h1 {
@@ -33,22 +38,18 @@ p {
   color: black;
 }
 
-.header-title {
-  font-size: 1.7rem;
+.link-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  /* Pour centrer */
-  margin-top: 2%;
-  margin-bottom: 2%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.link-title .header-title {
+  width: 45%;
+  margin-top: 4%;
+  margin-bottom: 3%;
 }
 
 .discover {
@@ -298,7 +299,7 @@ h1 {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   width: 100%;
-  height: 216px;
+  height: 174px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -429,6 +430,15 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.801);
+}
+
+footer img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(101%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(101%);
+  width: 6rem;
+  padding-left: 5.5%;
+  margin-bottom: -4px;
+  padding-top: 6%;
 }
 
 footer .about {

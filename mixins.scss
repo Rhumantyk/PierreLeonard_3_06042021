@@ -25,13 +25,17 @@ $breakpoints: ( /* Utiliser max-witdth */
 
 // // Page Index
 // // // Titre Index
-@mixin header-title-index /* Centrage titre */
+@mixin link-title /* Centrage titre */
 {
-    font-size: 1.7rem;
     display: flex;
-    margin: 0 auto; /* Pour centrer */
-    margin-top: 2%;
-    margin-bottom: 2%;
+    justify-content: space-around;    
+}
+
+@mixin header-title-index 
+{
+    width: 45%;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 // // Pages restaurants
@@ -257,7 +261,15 @@ $breakpoints: ( /* Utiliser max-witdth */
 {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.801);   
+    background-color: rgba(0, 0, 0, 0.801); 
+        img /* Contient couleur pour svg */
+        {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(101%);
+            width: 6rem;
+            padding-left: 5.5%;
+            margin-bottom: -4px;
+            padding-top: 6%;
+        }
         .about
         {
             @include nolists;
