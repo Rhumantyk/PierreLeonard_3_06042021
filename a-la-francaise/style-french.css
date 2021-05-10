@@ -164,6 +164,10 @@ img {
   margin-bottom: 4%;
 }
 
+.restaurant-menus .dishes__box:hover {
+  background-color: #99E2D0;
+}
+
 .restaurant-menus .dishes__menu {
   height: 27px;
   -webkit-box-flex: 1;
