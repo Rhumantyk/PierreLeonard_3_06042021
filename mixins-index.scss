@@ -1,3 +1,5 @@
+// Mixins Index
+
 @mixin border-radius-img-index
 {
     border-radius: 15px 15px 0% 0%;
@@ -11,6 +13,34 @@
     background-color: white;
 }
 
+// Titre Index
+@mixin link-title /* Centrage titre */
+{
+    display: flex;
+    justify-content: space-around;    
+}
+
+@mixin header-title-index 
+{
+    width: 45%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+@mixin btn-index
+{
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
+    border: none;
+    width: 118%;
+    padding: 7% 0%;
+    margin: 0% -8%;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
 @mixin h1-index
 {
     padding-left: 5%;  /* En px ou % ? */ 
@@ -21,4 +51,11 @@
 @mixin space-p-restaurants
 {
     padding-left: 4%;
+}
+
+// Nav Index
+@mixin radius-shadow-nav-index
+{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
 }

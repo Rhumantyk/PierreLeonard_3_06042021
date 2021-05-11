@@ -1,3 +1,5 @@
+// Mixins générales
+
 // Map breakpoints
 $breakpoints: ( /* Utiliser max-witdth */
     mobile-small: 375px, 
@@ -23,52 +25,6 @@ $breakpoints: ( /* Utiliser max-witdth */
     background-color: #f5f5f5;    
 }
 
-// // Page Index
-// // // Titre Index
-@mixin link-title /* Centrage titre */
-{
-    display: flex;
-    justify-content: space-around;    
-}
-
-@mixin header-title-index 
-{
-    width: 45%;
-    margin-top: 4%;
-    margin-bottom: 3%;
-}
-
-// // Pages restaurants
-// // // Titre Ohmyfood
-@mixin header-div 
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;    
-}
-
-@mixin left-arrow-title
-{
-    flex-grow: 0;
-    margin-left: 5%;
-    margin-bottom: 2%;
-}
-
-// // // Titre restaurant
-
-@mixin header-title /* Titre */
-{
-    font-size: 1.7rem;
-    display: flex;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    justify-content: center;
-    flex-grow: 3;
-    margin-right: 9%;
-    font-family: Shrikhand;
-}
-
 @mixin fa-heart /* Pour toutes les pages */
 {
     display: flex;
@@ -79,101 +35,17 @@ $breakpoints: ( /* Utiliser max-witdth */
     background-color: transparent;
     color: white;
     -webkit-text-stroke: 1px black;
-    
-    // stroke: white;
-//   stroke-width: 30px;
-//     &::before
-//     {
-//         color: black;
-//         // border-radius: 60% 60% 0% 0%;
-// //   border: 1px solid black;
-//         // stroke: black;
-// //   stroke-width: 10;
-//         // background-color: black;
-//         // color: linear-gradient(#FF79DA, #9356DC);
-//         // background: white; /* +++ */
-//         // text-shadow: 0 0 3px #000;
-//         // -webkit-background-clip: text;
-//         // -webkit-text-fill-color: transparent;
-//     } 
     &:hover
     {
         color: linear-gradient(#9356DC, #FF79DA);
         background: linear-gradient(#9356DC, #FF79DA); /* +++ */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0px black;
-
-        // &::before
-        // {
-        // color: linear-gradient(#FF79DA, #9356DC);
-        // background: -webkit-gradient linear-gradient(#FF79DA, #9356DC);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-        // } 
+        -webkit-text-stroke: 0px black; 
     }
 }
 
-// // // .restaurant-menus
-@mixin br-restaurant-menu 
-{
-    border-radius: 30px 30px 0px 0px;
-}
-
-@mixin img-hidden
-{
-    position: relative;
-    overflow: hidden;
-    margin-top: -15%;
-}
-
-@mixin restaurant-name
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-@mixin restaurant-name-title 
-{
-    font-weight: bold;
-    padding-left: 5.5%;
-}
-
-@mixin starters-margin-top
-{
-    margin-top: -10%;    
-}
-
-@mixin all-menus 
-{
-    margin-left: 5%;
-    margin-right: 5%;    
-}
-
-@mixin border-bottom-h2
-{
-    border-bottom: #99E2D0 solid 3px;
-    width: 41px;
-    padding-bottom: 2%;
-    padding-top: 10%;
-    font-size: initial;
-    font-weight: lighter;
-}
-
-@mixin font-weight-title
-{
-    font-size: 1.1rem;
-}
-
-
-
-
-
-
-
-
-// Mixins titres footers toutes pages
+// Titres footers toutes pages
 @mixin nolists
 {
     list-style-type: none;
@@ -182,78 +54,6 @@ $breakpoints: ( /* Utiliser max-witdth */
     {
         text-decoration: none;
     }
-}
-
-@mixin nolists-restaurants
-{
-    list-style-type: none;
-    
-    a:link, a:active, a:visited
-    {
-        text-decoration: none;
-        color: black;
-    }
-}
-
-@mixin radius-shadow-nav-index
-{
-    border-radius: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
-}
-
-@mixin radius-shadow-box
-{
-    border-radius: 15px; 
-    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
-    padding-left: 6%;
-    padding-right: 6%;
-    background-color: white;
-    margin-bottom: 4%;
-}
-
-@mixin radius-shadow-menu
-{
-    height: 27px;
-    flex-grow: 1;
-    display: flex;
-    font-weight: bold;
-}
-
-@mixin radius-shadow-detailed-price
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-@mixin btn-index
-{
-    background: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
-    border: none;
-    width: 118%;
-    padding: 7% 0%;
-    margin: 0% -8%;
-    border-radius: 100px;
-    color: white;
-    font-size: 1.05rem;
-    cursor: pointer;
-}
-
-@mixin btn-restaurants
-{
-    background: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
-    border: none;
-    width: 59%;
-    padding: 4% 0%;
-    margin: 0% 21%;
-    border-radius: 100px;
-    color: white;
-    font-size: 1.05rem;
-    cursor: pointer;
-    margin-top: 12%;
-    margin-bottom: 20%;
 }
 
 // Footers toutes pages

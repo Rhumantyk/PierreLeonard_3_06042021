@@ -1,0 +1,136 @@
+// Mixins Restaurants
+ 
+ 
+ // Titre Ohmyfood
+@mixin header-div 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin left-arrow-title
+{
+    flex-grow: 0;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+ // Titre restaurant
+
+@mixin header-title /* Titre */
+{
+    font-size: 1.7rem;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+    flex-grow: 3;
+    margin-right: 9%;
+    font-family: Shrikhand;
+}
+
+// // // .restaurant-menus
+@mixin nolists-restaurants
+{
+    list-style-type: none;
+    
+    a:link, a:active, a:visited
+    {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@mixin br-restaurant-menu 
+{
+    border-radius: 30px 30px 0px 0px;
+}
+
+@mixin img-hidden
+{
+    position: relative;
+    overflow: hidden;
+    margin-top: -15%;
+}
+
+@mixin restaurant-name
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin restaurant-name-title 
+{
+    font-weight: bold;
+    padding-left: 5.5%;
+}
+
+@mixin starters-margin-top
+{
+    margin-top: -10%;    
+}
+
+@mixin all-menus 
+{
+    margin-left: 5%;
+    margin-right: 5%;    
+}
+
+@mixin border-bottom-h2
+{
+    border-bottom: #99E2D0 solid 3px;
+    width: 41px;
+    padding-bottom: 2%;
+    padding-top: 10%;
+    font-size: initial;
+    font-weight: lighter;
+}
+
+@mixin radius-shadow-box
+{
+    border-radius: 15px; 
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: white;
+    margin-bottom: 4%;
+}
+
+@mixin radius-shadow-menu
+{
+    height: 27px;
+    flex-grow: 1;
+    display: flex;
+    font-weight: bold;
+}
+
+@mixin font-weight-title
+{
+    font-size: 1.1rem;
+}
+
+@mixin radius-shadow-detailed-price
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin btn-restaurants
+{
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
+    border: none;
+    width: 59%;
+    padding: 4% 0%;
+    margin: 0% 21%;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+    margin-top: 12%;
+    margin-bottom: 20%;
+}
