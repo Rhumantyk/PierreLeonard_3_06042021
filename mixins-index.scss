@@ -13,6 +13,13 @@
     background-color: white;
 }
 
+// Header Index
+@mixin header
+{
+    font-family: Shrikhand;
+    display: flex;
+    justify-content: space-around;
+}
 // Titre Index
 @mixin link-title /* Centrage titre */
 {

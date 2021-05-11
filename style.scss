@@ -26,18 +26,12 @@
 
 body
 {
-	background-color: white;
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
-    font-family: Roboto;
+	@include body;
 }
 
 header
 {
-    font-family: Shrikhand;
-    display: flex;
-    justify-content: space-around;
+    @include header;
 }
 
 h1
