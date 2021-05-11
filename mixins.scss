@@ -30,6 +30,11 @@ $breakpoints: ( /* Utiliser max-witdth */
     font-family: Roboto;
 }
 
+@mixin font-weight-title
+{
+    font-size: 1.1rem;
+}
+
 @mixin background-color
 {
     background-color: #f5f5f5;    

@@ -1,4 +1,9 @@
 // Mixins Index
+// Toute la page
+@mixin p 
+{
+    color: black;    
+}
 
 @mixin border-radius-img-index
 {
@@ -12,6 +17,8 @@
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
     background-color: white;
 }
+
+
 
 // Header Index
 @mixin header
@@ -34,6 +41,67 @@
     margin-bottom: 3%;
 }
 
+
+
+// Section .discover Index
+@mixin discover 
+{
+    display: flex;
+    flex-direction: column;
+    border-top: solid;
+    border-top-color: darken($location-bg, 20%);
+}
+
+// Section .location Index
+@mixin location
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: darken($location-bg, 8%);
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.88rem;
+    i
+    {
+        margin-left: -5%;
+        margin-right: 5%;
+        padding-bottom: 2px;
+    }
+    p
+    {
+        font-weight: bold;
+    }
+}
+
+// Section .booking Index
+@mixin booking 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include background-color;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    p
+    {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    }
+    :nth-child(2)
+    {
+        font-size: 1.1rem;
+        color: darken($location-bg, 45%);
+        font-weight: normal;
+        margin-top: -15px;
+    }
+    .button
+    {
+        @include btn-index;
+    }
+}
+
 @mixin btn-index
 {
     background: linear-gradient(#FF79DA, #9356DC);
@@ -48,6 +116,13 @@
     cursor: pointer;
 }
 
+// h1 index .nav et .restaurants
+@mixin h1-title 
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+// Fusionner les deux à un moment ? //
 @mixin h1-index
 {
     padding-left: 5%;  /* En px ou % ? */ 
@@ -55,14 +130,211 @@
     margin-bottom: -2%;
 }
 
+
+
+// Section .nav
+@mixin radius-shadow-nav-index
+{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+}
+
+@mixin nav 
+{
+    .nav-links
+    {
+        @include nolists;
+        li
+        {
+            @include radius-shadow-nav-index;
+            @include background-color;
+            display: flex;
+            flex-direction: row;
+            padding: 11px 0px;
+            margin-bottom: 4%;
+            width: 94%;
+            &:hover
+            {
+                background-color: rgba(147, 86, 220, .12);
+            }
+            &:hover .fas
+            {
+                color: #9356DC;
+            }
+            a
+            {
+                width: 100%;
+                color: black;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                > div
+                {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .fas
+                {
+                    color: darken($location-bg, 45%);
+                }
+                
+                i
+                {
+                    margin-right: 5%;
+                    margin-left: 5%;
+                    font-weight: bold;
+                }
+
+                p
+                {
+                    font-weight: bold;
+                }
+                .circle
+                {
+                    display: block;
+                    background-color:#9356DC;
+                    width: 100%;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 7px;
+                    font-weight: normal;
+                    margin-left: -74%;
+                    .circle-text
+                    {
+                        position: initial;
+                        text-align: center;
+                    }
+                }
+                .fa-mobile-alt p /* Essai pas concluant pour aligner les textes */
+                {
+                    margin-left: 2%;
+                }
+            } 
+        }
+    }
+}
+
+
+// Section .restaurants
 @mixin space-p-restaurants
 {
     padding-left: 4%;
 }
 
-// Nav Index
-@mixin radius-shadow-nav-index
+@mixin restaurants 
 {
-    border-radius: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+    @include background-color; 
+    @include nolists;
+    padding-bottom: 10%;
+    margin-top: 18%;
+    p
+    {
+        @include space-p-restaurants;
+    }
+    i
+    {
+        @include fa-heart;
+    }
+
+    .restaurants-cards
+    {
+        > div /* enfants directs de .restaurant-cards */
+        {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 10%);
+            max-width: 383px;
+            margin-bottom: -2%;
+            margin-left: auto;
+            margin-right: auto;
+            img
+            {
+                @include border-radius-img-index;
+                width: 100%;
+                height: 174px;
+                object-fit: cover;
+            }
+            .new
+            {
+                width: 28%;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                bottom: -44px;
+                left: 68%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #99E2D0;
+                color: darken(#99E2D0, 40%);
+                font-weight: bold;
+            }
+            > div /* idem */
+            {   
+                width: 100%;
+                @include border-radius-information-index;
+                p
+                {
+                    @include font-weight-title;
+                }
+                div:nth-child(1)
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 43px;
+                }
+                div:nth-child(2)
+                {
+                    height: 30px;
+                }
+            }
+
+            .test
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                height: 69px;
+                p:nth-child(1)
+                {
+                    flex-basis: 100%;
+                    order: 1;
+                    margin-top: 11px;
+                }
+                i:nth-child(2)
+                {
+                    width: 0%;
+                    order: 2;
+                    margin-top: -28px;
+                }
+                p:nth-child(3)
+                {
+                    width: 83%;
+                    order: 1;
+                    margin-top: -16px;
+                }
+            }
+        }
+        .div-1
+        {
+            margin-bottom: 6%;
+        }
+        .div-2
+        {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 10%);
+            max-width: 383px;
+            margin-bottom: 6%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }    
 }
