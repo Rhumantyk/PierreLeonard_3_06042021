@@ -60,7 +60,8 @@ $breakpoints: ( /* Utiliser max-witdth */
     }
 }
 
-// Titres footers
+
+// Footers
 @mixin nolists
 {
     list-style-type: none;
@@ -71,7 +72,6 @@ $breakpoints: ( /* Utiliser max-witdth */
     }
 }
 
-// Footers
 @mixin footer
 {
     display: flex;

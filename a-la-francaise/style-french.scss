@@ -28,35 +28,34 @@ body
 
 header div
 {
-    @include header-div;
-    a
-    {
-        @include left-arrow-title;
-        button
-        {
-            background-color: Transparent;
-            border: none;
-            cursor: pointer;
-        }
-    }
-    .header-title
-    {
-        @include header-title;
-    }   
+    @include header;
 }
 
+.header-title
+{
+    @include header-title-restaurant;
+}
+
+
+// Aside
+aside
+{
+    @include aside;
+}
+
+aside img
+{
+    @include aisde-img;
+}
+
+
+// Section .restaurant-menus --> Changer en #
 h1
 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    font-family: Shrikhand;
+    @include h1-restaurants;
 }
 
-img
-{
-    width: 100%;
-    object-fit: cover;
-}
+
 
 .restaurant-menus /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
 {
