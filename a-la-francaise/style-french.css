@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face /* Logo et titres */ {
   font-family: Shrikhand;
   src: url("Fonts/Police/Shrikhand-Regular.otf");
@@ -131,7 +132,7 @@ h1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   /* +++ */
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px black;
 }
@@ -160,36 +161,12 @@ h1 {
 }
 
 .restaurant-menus .dishes {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-animation: load 1.5s ease-in-out;
-          animation: load 1.5s ease-in-out;
-}
-
-@-webkit-keyframes load {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes load {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.restaurant-menus .dishes:default {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-animation: BoxApparition 1s ease 0s 1 normal forwards;
+          animation: BoxApparition 1s ease 0s 1 normal forwards;
 }
 
 .restaurant-menus .dishes__box {
+  /* Pourquoi ça ne marche pas ? */
   border-radius: 15px;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -199,10 +176,54 @@ h1 {
   margin-bottom: 4%;
 }
 
+@-webkit-keyframes BoxApparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes BoxApparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.restaurant-menus .dishes__box .dishes__box:nth-child(1) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.restaurant-menus .dishes__box .dishes__box:nth-child(2) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.restaurant-menus .dishes__box .dishes__box:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.restaurant-menus .dishes__box .dishes__box:nth-child(4) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
 .restaurant-menus .dishes__box .hidden {
   display: none;
-  -webkit-transition: 2s linear;
-  transition: 2s linear;
   width: 23%;
   background-color: #99E2D0;
   color: white;
@@ -211,15 +232,83 @@ h1 {
   height: 81px;
   top: 0%;
   border-radius: 0px 15px 15px 0px;
+  /* Partie animation ? */
+  -webkit-animation: Anim-check 1s ease 0s 1 normal forwards;
+          animation: Anim-check 1s ease 0s 1 normal forwards;
 }
 
 .restaurant-menus .dishes__box:hover .hidden {
+  display: inline-block;
+  right: 0px;
+  /* Partie animation ? */
+}
+
+@-webkit-keyframes Anim-check {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes Anim-check {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.restaurant-menus .dishes__box:hover .hidden i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 2s linear;
-  transition: 2s linear;
-  right: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.restaurant-menus .dishes__box:hover .hidden i .fa-check-circle {
+  /* Partie animation : Où la placer ? */
+  -webkit-animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  /* Partie animation */
+}
+
+@-webkit-keyframes rotate-i {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-i {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .restaurant-menus .dishes__menu {
