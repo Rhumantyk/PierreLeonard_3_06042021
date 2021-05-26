@@ -42,7 +42,9 @@
     .header-title
     {
         @include header-title-restaurant;
-    }    
+    }
+    
+    /* Tentative tablette et + */
 }
 
 // Aside
@@ -110,6 +112,7 @@
 @mixin restaurant-name-title 
 {
     font-weight: bold;
+    margin-top: 26px;
     // padding-left: 5.5%;
 }
 

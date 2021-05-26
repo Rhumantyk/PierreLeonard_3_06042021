@@ -415,6 +415,14 @@
         {
             max-width: none;
             width: 383px;
+            .div-2
+            {
+                @media screen and (min-width: map-get($breakpoints, issue-1))
+                {
+                    padding-top: 30px;
+                } 
+            }
         }
     }
 }
+
