@@ -36,6 +36,11 @@ header div
     @include header-title-restaurant;
 }
 
+header
+{
+    @include tablet-header;
+}
+
 
 // Aside
 aside

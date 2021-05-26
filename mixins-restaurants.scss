@@ -43,8 +43,43 @@
     {
         @include header-title-restaurant;
     }
-    
-    /* Tentative tablette et + */
+    .empty-div
+    {
+        display: none;
+    }
+}
+
+/* Tentative tablette et + */
+@mixin tablet-header
+{
+    @media screen and (min-width: map-get($breakpoints, header-restaurants))
+    {
+        div
+        {
+            display: flex;
+            justify-content: space-between;
+            .link-title
+            {
+                .header-title
+                {
+                    width: 45%;
+                    margin-top: 4%;
+                    margin-bottom: 3%;
+                    object-fit: cover;
+                    margin-left: 19%;
+
+                    
+                }
+            }
+            .empty-div
+            {
+                display: flex;
+                flex-grow: 0;
+                margin-left: 5%;
+                margin-bottom: 2%;
+            }
+        }
+    }
 }
 
 // Aside

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAmDA,6BAA6B",
     "sources": [
         "mixins-restaurants.scss"
     ],

@@ -2,13 +2,14 @@
 
 // Map breakpoints
 $breakpoints: ( /* Utiliser max-witdth */
-    mobile-small: 320px, 
-    mobile-medium: 375px,
-    mobile-large: 425px,
-    tablet: 768px,
-    laptop: 1024px,
+    mobile-small: 321px, 
+    mobile-medium: 376px,
+    mobile-large: 426px,
+    header-restaurants: 426px, /* 470 */
+    tablet: 769px,
+    laptop: 1025px,
     issue-1: 1150px,
-    laptop-large: 1440px
+    laptop-large: 1441px
 
 );
 
