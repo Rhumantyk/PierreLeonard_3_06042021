@@ -93,6 +93,13 @@
     margin-top: -15%;
 }
 
+@mixin restaurant-margin
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;   
+}
+
 @mixin restaurant-name
 {
     display: flex;
@@ -103,12 +110,12 @@
 @mixin restaurant-name-title 
 {
     font-weight: bold;
-    padding-left: 5.5%;
+    // padding-left: 5.5%;
 }
 
 @mixin starters-margin-top
 {
-    margin-top: -10%;    
+    margin-top: -5%; /* -10% à l'origine si besoin */
 }
 
 @mixin all-menus 
@@ -121,7 +128,7 @@
 {
     border-bottom: #99E2D0 solid 3px;
     width: 41px;
-    padding-bottom: 2%;
+    padding-bottom: 4px;
     padding-top: 10%;
     font-size: initial;
     font-weight: lighter;

@@ -102,6 +102,17 @@
     }
 }
 
+@mixin tablet-div-palette /* Pansement à changer ! */
+{
+    @media screen and (min-width: 465px)
+    {
+        .restaurants-cards .tablet-palette
+        {
+            margin-bottom: 2%;
+        }
+    }
+}
+
 @mixin btn-index
 {
     background: linear-gradient(#FF79DA, #9356DC);
@@ -128,6 +139,25 @@
     padding-left: 5%;  /* En px ou % ? */ 
     padding-top: 7%;
     margin-bottom: -2%;
+}
+
+@mixin tablet-h1-position
+{
+    @media screen and (min-width: map-get($breakpoints, mobile-large))
+    {
+        h1
+        {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .tablet-h1-restaurants
+        {
+            
+            padding-left: 0%;
+            margin-bottom: 0px;
+        }
+    }
 }
 
 
@@ -336,5 +366,5 @@
             margin-left: auto;
             margin-right: auto;
         }
-    }    
+    }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face /* Logo et titres */ {
   font-family: Shrikhand;
   src: url("Fonts/Police/Shrikhand-Regular.otf");
@@ -137,6 +138,12 @@ p {
   cursor: pointer;
 }
 
+@media screen and (min-width: 425px) {
+  .booking .remove-size {
+    display: none;
+  }
+}
+
 h1 {
   padding-left: 5%;
   /* En px ou % ? */
@@ -240,6 +247,22 @@ h1 {
   margin-left: 2%;
 }
 
+@media screen and (min-width: 425px) {
+  .nav h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 28px;
+  }
+  .nav .tablet-h1-restaurants {
+    padding-left: 0%;
+    margin-bottom: 0px;
+  }
+}
+
 .restaurants {
   background-color: #f5f5f5;
   list-style-type: none;
@@ -262,7 +285,8 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 9%;
+  padding-right: 6%;
+  /* 9% à l'origine */
   font-size: 1.5em;
   margin-bottom: 2%;
   background-color: transparent;
@@ -420,6 +444,28 @@ h1 {
   margin-right: auto;
 }
 
+@media screen and (min-width: 465px) {
+  .restaurants .restaurants-cards .tablet-palette {
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .restaurants h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 28px;
+  }
+  .restaurants .tablet-h1-restaurants {
+    padding-left: 0%;
+    margin-bottom: 0px;
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,4 +518,7 @@ footer .fas {
 footer .fa-ustensils, footer .icone-sentence {
   padding-left: 5px;
 }
+
+/* Tablette */
+/* Fin tablette */
 /*# sourceMappingURL=style.css.map */

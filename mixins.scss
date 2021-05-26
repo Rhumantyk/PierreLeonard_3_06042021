@@ -2,12 +2,12 @@
 
 // Map breakpoints
 $breakpoints: ( /* Utiliser max-witdth */
-    mobile-small: 375px, 
-    mobile-medium: 425px,
-    mobile-large: 768px,
-    tablet: 1024px,
-    laptop: 1440px,
-    laptop-large: 2560px
+    mobile-small: 320px, 
+    mobile-medium: 375px,
+    mobile-large: 425px,
+    tablet: 768px,
+    laptop: 1024px,
+    laptop-large: 1440px
 
 );
 
@@ -19,6 +19,18 @@ $breakpoints: ( /* Utiliser max-witdth */
         
     }
 }
+
+// Mixins Tablette
+@mixin tablet-booking-br /*  À changer de place */
+    {
+        @media screen and (min-width: map-get($breakpoints, mobile-large))
+        {
+            .remove-size
+            {
+                display: none;
+            }
+        }
+    }
 
 // Body
 @mixin body 
@@ -44,7 +56,7 @@ $breakpoints: ( /* Utiliser max-witdth */
 {
     display: flex;
     align-items: center;
-    padding-right: 9%;
+    padding-right: 6%; /* 9% à l'origine si besoin de changer */
     font-size: 1.5em;
     margin-bottom: 2%;
     background-color: transparent;

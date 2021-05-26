@@ -65,6 +65,7 @@ h1
     @include img-hidden;
     .restaurant
     {
+        @include restaurant-margin;
         @include restaurant-name;
         & i
         {
@@ -228,3 +229,7 @@ footer
 {
     @include footer;
 }
+
+
+/* Tablette */
+/* Fin tablette */

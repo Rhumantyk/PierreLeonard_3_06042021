@@ -68,22 +68,26 @@ $location-bg: #f5f5f5;
 .booking
 {
     @include booking;
+    @include tablet-booking-br;
 }
 
 // Section .nav --> Changer en #nav
 h1
 {
-    @include h1-index;   
+    @include h1-index;  
 }
 
 .nav
 {
     @include nav;
+    @include tablet-h1-position;
 }
 
 .restaurants
 {
-    @include restaurants
+    @include restaurants;
+    @include tablet-div-palette;
+    @include tablet-h1-position;
 }
 
 // Footer 
@@ -91,3 +95,7 @@ footer
 {
     @include footer;
 }
+
+/* Tablette */
+// La palette du goût : margin-bottom: 3% ou 2%;  garder tel quel ?
+/* Fin tablette */
