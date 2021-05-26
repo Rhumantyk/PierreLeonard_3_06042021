@@ -81,6 +81,7 @@ h1
 {
     @include nav;
     @include tablet-h1-position;
+    @include laptop-nav-index;
 }
 
 .restaurants
@@ -88,6 +89,7 @@ h1
     @include restaurants;
     @include tablet-div-palette;
     @include tablet-h1-position;
+    @include laptop-restaurants;
 }
 
 // Footer 
@@ -99,3 +101,13 @@ footer
 /* Tablette */
 // La palette du goût : margin-bottom: 3% ou 2%;  garder tel quel ?
 /* Fin tablette */
+
+/* Laptop classic */
+// .restaurants : display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;
+// h1 : width : 100%;
+// .restaurants-cards > div : supprimer width: calc(100% - 10%); Remplacer max-width par width (garder le même 383px;)
+
+/* Fin laptop classic */
+
+/* Laptop L */
+/* Fin laptop L */

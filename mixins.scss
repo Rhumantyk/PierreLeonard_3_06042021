@@ -22,15 +22,15 @@ $breakpoints: ( /* Utiliser max-witdth */
 
 // Mixins Tablette
 @mixin tablet-booking-br /*  À changer de place */
+{
+    @media screen and (min-width: map-get($breakpoints, mobile-large))
     {
-        @media screen and (min-width: map-get($breakpoints, mobile-large))
+        .remove-size
         {
-            .remove-size
-            {
-                display: none;
-            }
+            display: none;
         }
     }
+}
 
 // Body
 @mixin body 

@@ -256,10 +256,37 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 28px;
+    padding-left: 0%;
   }
   .nav .tablet-h1-restaurants {
     padding-left: 0%;
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav li {
+    height: 150px;
+    width: 500px;
+  }
+  .nav .li-2 {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .nav .li-3 {
+    margin-right: 5.7%;
   }
 }
 
@@ -286,7 +313,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 6%;
-  /* 9% à l'origine */
+  /* 9% à l'origine si besoin de changer */
   font-size: 1.5em;
   margin-bottom: 2%;
   background-color: transparent;
@@ -410,7 +437,8 @@ h1 {
 }
 
 .restaurants .restaurants-cards > div .test i:nth-child(2) {
-  width: 0%;
+  width: 3%;
+  /* Origine 0% */
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -459,10 +487,36 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 28px;
+    padding-left: 0%;
   }
   .restaurants .tablet-h1-restaurants {
     padding-left: 0%;
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 13%;
+  }
+  .restaurants h1 {
+    width: 100%;
+    padding-top: 5%;
+  }
+  .restaurants .restaurants-cards {
+    max-width: none;
+    width: 383px;
   }
 }
 
@@ -521,4 +575,8 @@ footer .fa-ustensils, footer .icone-sentence {
 
 /* Tablette */
 /* Fin tablette */
+/* Laptop classic */
+/* Fin laptop classic */
+/* Laptop L */
+/* Fin laptop L */
 /*# sourceMappingURL=style.css.map */
