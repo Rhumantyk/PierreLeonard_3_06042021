@@ -204,8 +204,53 @@ h1 {
           animation: BoxApparition 1s ease 0s 1 normal forwards;
 }
 
+@-webkit-keyframes BoxRising {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes BoxRising {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.restaurant-menus .dishes .box-1 {
+  -webkit-animation: BoxRising 1s ease .5s 1 normal forwards;
+          animation: BoxRising 1s ease .5s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-2 {
+  -webkit-animation: BoxRising 1s ease .6s 1 normal forwards;
+          animation: BoxRising 1s ease .6s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-3 {
+  -webkit-animation: BoxRising 1s ease .7s 1 normal forwards;
+          animation: BoxRising 1s ease .7s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-4 {
+  -webkit-animation: BoxRising 1s ease .8s 1 normal forwards;
+          animation: BoxRising 1s ease .8s 1 normal forwards;
+}
+
 .restaurant-menus .dishes__box {
-  /* Pourquoi ça ne marche pas ? */
   border-radius: 15px;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -213,52 +258,6 @@ h1 {
   padding-right: 6%;
   background-color: white;
   margin-bottom: 4%;
-}
-
-@-webkit-keyframes BoxApparition {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70px);
-            transform: translateY(70px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes BoxApparition {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70px);
-            transform: translateY(70px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.restaurant-menus .dishes__box .dishes__box:nth-child(1) {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
-}
-
-.restaurant-menus .dishes__box .dishes__box:nth-child(2) {
-  -webkit-animation-delay: .7s;
-          animation-delay: .7s;
-}
-
-.restaurant-menus .dishes__box .dishes__box:nth-child(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.restaurant-menus .dishes__box .dishes__box:nth-child(4) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
 }
 
 .restaurant-menus .dishes__box .hidden {
@@ -319,12 +318,12 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-}
-
-.restaurant-menus .dishes__box:hover .hidden i .fa-check-circle {
   /* Partie animation : Où la placer ? */
   -webkit-animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.restaurant-menus .dishes__box:hover .hidden i .fa-check-circle {
   /* Partie animation */
 }
 
@@ -334,8 +333,8 @@ h1 {
             transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
@@ -345,8 +344,8 @@ h1 {
             transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 

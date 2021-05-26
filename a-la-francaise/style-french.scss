@@ -98,57 +98,65 @@ h1
 
     .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
     {
-        // animation: Anim-dishes 1s ease 0s 1 normal forwards;
-
-        // @keyframes Anim-dishes {
-        //     0% {
-        //       opacity: 0;
-        //       transform: translateY(250px);
-        //     }
-          
-        //     100% {
-        //       opacity: 1;
-        //       transform: translateY(0);
-        //     }
-        //   }
         animation: BoxApparition 1s ease 0s 1 normal forwards;
+        @keyframes BoxRising
+        {
+            0% {
+                opacity: 0;
+                transform: translateY(70px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .box-1
+        {
+            animation: BoxRising 1s ease .5s 1 normal forwards;
+        }
 
+        .box-2
+        {
+            animation: BoxRising 1s ease .6s 1 normal forwards;
+        }
+
+        .box-3
+        {
+            animation: BoxRising 1s ease .7s 1 normal forwards;
+        }
+
+        .box-4
+        {
+            animation: BoxRising 1s ease .8s 1 normal forwards;
+        }
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         &__box
-        {   
-            
-            // animation-fill-mode: both;
-
-            @keyframes BoxApparition {
-                0% {
-                  opacity: 0;
-                  transform: translateY(70px);
-                }
-              
-                100% {
-                  opacity: 1;
-                  transform: translateY(0);
-                }
-              }
-
-            
-            /* Pourquoi ça ne marche pas ? */
-            .dishes__box:nth-child(1)
-            {
-                animation-delay: .5s;
-            }
-            .dishes__box:nth-child(2)
-            {
-                animation-delay: .7s;
-            }
-            .dishes__box:nth-child(3)
-            {
-                animation-delay: 1s;
-            }
-            .dishes__box:nth-child(4)
-            {
-                animation-delay: 1.2s;
-            }
-          
+        {  
 
             @include radius-shadow-box;
             .hidden
@@ -169,45 +177,46 @@ h1
                 
             }
             &:hover .hidden
+            {
+                display: inline-block;
+                right: 0px;
+
+                /* Partie animation ? */
+                @keyframes Anim-check {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(250px);
+                    }
+                    
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+                i
                 {
-                    display: inline-block;
-                    right: 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
 
-                    /* Partie animation ? */
-                    @keyframes Anim-check {
-                        0% {
-                          opacity: 0;
-                          transform: translateX(250px);
-                        }
-                      
-                        100% {
-                          opacity: 1;
-                          transform: translateX(0);
-                        }
-                      }
-                    i
+                    /* Partie animation : Où la placer ? */
+                    animation: rotate-i 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                    .fa-check-circle
                     {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-
-                        .fa-check-circle
-                        {
-                        /* Partie animation : Où la placer ? */
-                        animation: rotate-i 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                        /* Partie animation */
-                        @keyframes rotate-i {
-                            0% {
-                              transform: rotate(0);
-                            }
-                            100% {
-                              transform: rotate(360deg);
-                            }
-                          }
+                    /* Partie animation */
+                    @keyframes rotate-i {
+                        0% {
+                            transform: rotate(0);
+                        }
+                        100% {
+                            transform: rotate(180deg);
+                        }
                         }
                     }
                 }
+            }
         }
         &__menu
         {
