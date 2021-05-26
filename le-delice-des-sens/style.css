@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Tentative tablette et + */
 @font-face /* Logo et titres */ {
   font-family: Shrikhand;
   src: url("Fonts/Police/Shrikhand-Regular.otf");
@@ -51,20 +53,64 @@ header div a button {
 }
 
 header div .header-title {
-  font-size: 1.7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  margin-right: 5%;
-  font-family: Shrikhand;
+  width: 45%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 19%;
+}
+
+header div .empty-div {
+  display: none;
+}
+
+.header-title {
+  width: 45%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 19%;
+}
+
+@media screen and (min-width: 426px) {
+  header div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header div .link-title .header-title {
+    width: 45%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 19%;
+  }
+  header div .empty-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-left: 5%;
+    margin-bottom: 2%;
+  }
+}
+
+aside aside {
+  margin-top: -3%;
+}
+
+aside img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h1 {
@@ -73,15 +119,13 @@ h1 {
   font-family: Shrikhand;
 }
 
-img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .restaurant-menus {
   background-color: #f5f5f5;
   list-style-type: none;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -15%;
 }
 
 .restaurant-menus a:link, .restaurant-menus a:active, .restaurant-menus a:visited {
@@ -90,6 +134,9 @@ img {
 }
 
 .restaurant-menus .restaurant {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,14 +156,33 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 9%;
+  padding-right: 6%;
+  /* 9% à l'origine si besoin de changer */
   font-size: 1.5em;
   margin-bottom: 2%;
+  background-color: transparent;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.restaurant-menus .restaurant i:hover {
+  color: linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  /* +++ */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px black;
 }
 
 .restaurant-menus .restaurant h1 {
   font-weight: bold;
-  padding-left: 3.5%;
+  margin-top: 26px;
+}
+
+.restaurant-menus .starters {
+  margin-top: -5%;
+  /* -10% à l'origine si besoin */
 }
 
 .restaurant-menus .starters, .restaurant-menus .courses, .restaurant-menus .deserts {
@@ -126,20 +192,176 @@ img {
 
 .restaurant-menus .starters h2, .restaurant-menus .courses h2, .restaurant-menus .deserts h2 {
   border-bottom: #99E2D0 solid 3px;
-  width: 53px;
-  /* media query, faudra autre solution ou pas ? */
-  padding-bottom: 2%;
+  width: 41px;
+  padding-bottom: 4px;
+  padding-top: 10%;
+  font-size: initial;
+  font-weight: lighter;
+}
+
+.restaurant-menus .dishes {
+  -webkit-animation: BoxApparition 1s ease 0s 1 normal forwards;
+          animation: BoxApparition 1s ease 0s 1 normal forwards;
+}
+
+@-webkit-keyframes BoxRising {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes BoxRising {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.restaurant-menus .dishes .box-1 {
+  -webkit-animation: BoxRising 1s ease .5s 1 normal forwards;
+          animation: BoxRising 1s ease .5s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-2 {
+  -webkit-animation: BoxRising 1s ease .6s 1 normal forwards;
+          animation: BoxRising 1s ease .6s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-3 {
+  -webkit-animation: BoxRising 1s ease .7s 1 normal forwards;
+          animation: BoxRising 1s ease .7s 1 normal forwards;
+}
+
+.restaurant-menus .dishes .box-4 {
+  -webkit-animation: BoxRising 1s ease .8s 1 normal forwards;
+          animation: BoxRising 1s ease .8s 1 normal forwards;
 }
 
 .restaurant-menus .dishes__box {
-  border-radius: 6%;
+  border-radius: 15px;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
+  padding-left: 6%;
+  padding-right: 6%;
   background-color: white;
+  margin-bottom: 4%;
+}
+
+.restaurant-menus .dishes__box .hidden {
+  display: none;
+  width: 23%;
+  background-color: #99E2D0;
+  color: white;
+  position: absolute;
+  right: 19px;
+  height: 81px;
+  top: 0%;
+  border-radius: 0px 15px 15px 0px;
+  /* Partie animation ? */
+  -webkit-animation: Anim-check 1s ease 0s 1 normal forwards;
+          animation: Anim-check 1s ease 0s 1 normal forwards;
+}
+
+.restaurant-menus .dishes__box:hover .hidden {
+  display: inline-block;
+  right: 0px;
+  /* Partie animation ? */
+}
+
+@-webkit-keyframes Anim-check {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes Anim-check {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.restaurant-menus .dishes__box:hover .hidden i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  /* Partie animation : Où la placer ? */
+  -webkit-animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: rotate-i 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.restaurant-menus .dishes__box:hover .hidden i .fa-check-circle {
+  /* Partie animation */
+}
+
+@-webkit-keyframes rotate-i {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate-i {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 .restaurant-menus .dishes__menu {
+  height: 27px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: bold;
+}
+
+.restaurant-menus .dishes__menu p {
+  font-size: 1.1rem;
 }
 
 .restaurant-menus .dishes__detailed-price {
@@ -161,14 +383,15 @@ img {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
           box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
   border: none;
-  width: 69%;
-  padding: 6% 0%;
-  margin: 0% 16%;
+  width: 59%;
+  padding: 4% 0%;
+  margin: 0% 21%;
   border-radius: 100px;
   color: white;
   font-size: 1.05rem;
-  margin-top: 14%;
-  margin-bottom: 22%;
+  cursor: pointer;
+  margin-top: 12%;
+  margin-bottom: 20%;
 }
 
 footer {
@@ -182,9 +405,18 @@ footer {
   background-color: rgba(0, 0, 0, 0.801);
 }
 
+footer img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(101%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(104%) contrast(101%);
+  width: 6rem;
+  padding-left: 5.5%;
+  margin-bottom: -4px;
+  padding-top: 6%;
+}
+
 footer .about {
   list-style-type: none;
-  padding-left: 16px;
+  padding-left: 5.5%;
 }
 
 footer .about a:link, footer .about a:active, footer .about a:visited {
@@ -196,8 +428,14 @@ footer p, footer a {
 }
 
 footer p {
-  padding-left: 16px;
+  padding-left: 5.5%;
   margin-bottom: -5px;
+  padding-top: 1%;
+  font-family: Shrikhand;
+}
+
+footer nav {
+  padding-bottom: 3%;
 }
 
 footer .fas {
@@ -209,7 +447,10 @@ footer .fa-ustensils, footer .icone-sentence {
   padding-left: 5px;
 }
 
-footer p {
-  font-family: Shrikhand;
-}
+/* Tablette */
+/* Fin tablette */
+/* Laptop classic */
+/* Fin laptop classic */
+/* Laptop L */
+/* Fin laptop L */
 /*# sourceMappingURL=style.css.map */

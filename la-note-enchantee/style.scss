@@ -23,93 +23,212 @@
 
 body
 {
-	background-color: white;
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
-    font-family: Roboto;
+	@include body;
 }
 
 header div
 {
-    @include header-div;
-    a
-    {
-        @include left-arrow-title;
-        button
-        {
-            background-color: Transparent;
-            border: none;
-            cursor: pointer;
-        } 
-    }
-    .header-title
-    {
-        @include header-title-restaurants;
-    }   
+    @include header;
 }
 
+.header-title
+{
+    @include header-title-restaurant;
+}
+
+header
+{
+    @include tablet-header;
+}
+
+
+// Aside
+aside
+{
+    @include aside;
+}
+
+aside img
+{
+    @include aisde-img;
+}
+
+
+// Section .restaurant-menus --> Changer en #
 h1
 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    font-family: Shrikhand;
+    @include h1-restaurants;
 }
 
-img
-{
-    width: 100%;  
-    object-fit:contain;
-}
 
-.restaurant-menus
+
+.restaurant-menus /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
 {
     @include background-color; 
     @include nolists-restaurants;
+    @include br-restaurant-menu;
+    @include img-hidden;
     .restaurant
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include restaurant-margin;
+        @include restaurant-name;
         & i
         {
             @include fa-heart;
         }
         & h1
         {
-            font-weight: bold;
-            padding-left: 3.5%;
+            @include restaurant-name-title;
         }
+    }
+
+    .starters
+    {
+        @include starters-margin-top;
     }
 
     .starters, .courses, .deserts
     {
         @include all-menus;
-    }
-
-    .starters h2, .courses h2, .deserts h2
-    {
-        border-bottom: #99E2D0 solid 3px;
-        width: 53px; /* media query, faudra autre solution ou pas ? */
-        padding-bottom: 2%;
-    }
-
-    .dishes
-    {
-        &__box
+        h2
         {
-            @include radius-shadow;
-            background-color: white;
+            @include border-bottom-h2;
+        }
+    }
+
+    .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
+    {
+        animation: BoxApparition 1s ease 0s 1 normal forwards;
+        @keyframes BoxRising
+        {
+            0% {
+                opacity: 0;
+                transform: translateY(70px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .box-1
+        {
+            animation: BoxRising 1s ease .5s 1 normal forwards;
+        }
+
+        .box-2
+        {
+            animation: BoxRising 1s ease .6s 1 normal forwards;
+        }
+
+        .box-3
+        {
+            animation: BoxRising 1s ease .7s 1 normal forwards;
+        }
+
+        .box-4
+        {
+            animation: BoxRising 1s ease .8s 1 normal forwards;
+        }
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        &__box
+        {  
+
+            @include radius-shadow-box;
+            .hidden
+            {
+                display: none;
+                // display: flex;
+                width: 23%;
+                background-color: #99E2D0;
+                color: white;
+                position: absolute;
+                right: 19px;
+                height: 81px;
+                top: 0%;
+                border-radius: 0px 15px 15px 0px;
+
+                /* Partie animation ? */
+                animation: Anim-check 1s ease 0s 1 normal forwards;
+                
+            }
+            &:hover .hidden
+            {
+                display: inline-block;
+                right: 0px;
+
+                /* Partie animation ? */
+                @keyframes Anim-check {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(250px);
+                    }
+                    
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+                i
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    /* Partie animation : Où la placer ? */
+                    animation: rotate-i 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                    .fa-check-circle
+                    {
+                    /* Partie animation */
+                    @keyframes rotate-i {
+                        0% {
+                            transform: rotate(0);
+                        }
+                        100% {
+                            transform: rotate(180deg);
+                        }
+                        }
+                    }
+                }
+            }
         }
         &__menu
         {
-            font-weight: bold;
+            @include radius-shadow-menu;
+            p
+            {
+                @include font-weight-title;
+            }
         }
         &__detailed-price
         {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include radius-shadow-detailed-price;
         }
     }
 
@@ -122,11 +241,15 @@ img
 // Footer 
 footer
 {
-    display: flex;
-    flex-direction: column;
     @include footer;
-    p
-    {
-        @include footer-title;
-    }
 }
+
+
+/* Tablette */
+/* Fin tablette */
+
+/* Laptop classic */
+/* Fin laptop classic */
+
+/* Laptop L */
+/* Fin laptop L */
