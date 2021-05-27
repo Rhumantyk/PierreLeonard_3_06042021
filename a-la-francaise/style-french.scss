@@ -156,7 +156,13 @@ h1
 
         
         &__box
-        {  
+        {
+            p
+            {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
             overflow: hidden;
             @include radius-shadow-box;
             .hidden
@@ -220,15 +226,24 @@ h1
         }
         &__menu
         {
+            display: flex;
+            flex-direction: row; /* Les 3 servent à activer overflow ellipsis */
+            flex-wrap: wrap;
             @include radius-shadow-menu;
             p
-            {
-                @include font-weight-title;
+                {
+            @include font-weight-title;
             }
         }
         &__detailed-price
         {
             @include radius-shadow-detailed-price;
+            p:nth-child(2)
+            {
+                overflow: visible;
+                text-overflow: inherit;
+                white-space: none;
+            }
         }
     }
 

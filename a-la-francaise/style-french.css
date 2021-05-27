@@ -261,6 +261,12 @@ h1 {
   margin-bottom: 4%;
 }
 
+.restaurant-menus .dishes__box p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .restaurant-menus .dishes__box .hidden {
   display: none;
   width: 23%;
@@ -350,12 +356,20 @@ h1 {
 }
 
 .restaurant-menus .dishes__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Les 3 servent à activer overflow ellipsis */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 27px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-weight: bold;
 }
@@ -375,6 +389,12 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.restaurant-menus .dishes__detailed-price p:nth-child(2) {
+  overflow: visible;
+  text-overflow: inherit;
+  white-space: none;
 }
 
 .restaurant-menus .button {
