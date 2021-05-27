@@ -125,6 +125,11 @@
     color: white;
     font-size: 1.05rem;
     cursor: pointer;
+    &:hover
+    {
+        filter: brightness(1.05);
+        box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .22);
+    }
 }
 
 // h1 index .nav et .restaurants

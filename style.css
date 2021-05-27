@@ -138,6 +138,13 @@ p {
   cursor: pointer;
 }
 
+.booking .button:hover {
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.22);
+          box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.22);
+}
+
 @media screen and (min-width: 426px) {
   .booking .remove-size {
     display: none;

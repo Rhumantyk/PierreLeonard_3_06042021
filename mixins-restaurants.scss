@@ -211,4 +211,9 @@
     cursor: pointer;
     margin-top: 12%;
     margin-bottom: 20%;
+    &:hover
+    {
+        filter: brightness(1.05);
+        box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .22);
+    }
 }
