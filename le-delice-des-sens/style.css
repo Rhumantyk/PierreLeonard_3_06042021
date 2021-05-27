@@ -394,6 +394,13 @@ h1 {
   margin-bottom: 20%;
 }
 
+.restaurant-menus .button:hover {
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.22);
+          box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.22);
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -115,6 +115,8 @@
 
 @mixin btn-index
 {
+    display: flex;
+    justify-content: center;
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, .12);
     border: none;

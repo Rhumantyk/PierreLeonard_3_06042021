@@ -108,6 +108,7 @@ p {
   background-color: #f5f5f5;
   padding-top: 10px;
   padding-bottom: 50px;
+  list-style-type: none;
 }
 
 .booking p {
@@ -124,6 +125,12 @@ p {
 }
 
 .booking .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.12);
@@ -149,6 +156,10 @@ p {
   .booking .remove-size {
     display: none;
   }
+}
+
+.booking a:link, .booking a:active, .booking a:visited {
+  text-decoration: none;
 }
 
 h1 {
