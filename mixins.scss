@@ -69,8 +69,9 @@ $breakpoints: ( /* Utiliser max-witdth */
         color: linear-gradient(#9356DC, #FF79DA);
         background: linear-gradient(#9356DC, #FF79DA); /* +++ */
         background-clip: text;
+        
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0px black; 
+        -webkit-text-stroke: 0px black;
     }
 }
 

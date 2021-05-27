@@ -157,7 +157,7 @@ h1
         
         &__box
         {  
-
+            overflow: hidden;
             @include radius-shadow-box;
             .hidden
             {
@@ -167,7 +167,7 @@ h1
                 background-color: #99E2D0;
                 color: white;
                 position: absolute;
-                right: 19px;
+                // right: 19px;
                 height: 81px;
                 top: 0%;
                 border-radius: 0px 15px 15px 0px;
@@ -184,13 +184,13 @@ h1
                 /* Partie animation ? */
                 @keyframes Anim-check {
                     0% {
-                        opacity: 0;
-                        transform: translateX(250px);
+                        opacity: 1;
+                        transform: translateX(100%);
                     }
                     
                     100% {
                         opacity: 1;
-                        transform: translateX(0);
+                        transform: translateX(0%);
                     }
                 }
                 i
@@ -201,17 +201,17 @@ h1
                     height: 100%;
 
                     /* Partie animation : Où la placer ? */
-                    animation: rotate-i 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: rotate-i 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
                     .fa-check-circle
                     {
                     /* Partie animation */
                     @keyframes rotate-i {
                         0% {
-                            transform: rotate(0);
+                            transform: rotate(90deg);
                         }
                         100% {
-                            transform: rotate(180deg);
+                            transform: rotate(360deg);
                         }
                         }
                     }
