@@ -168,12 +168,10 @@ h1
             .hidden
             {
                 display: none;
-                // display: flex;
                 width: 23%;
                 background-color: #99E2D0;
                 color: white;
                 position: absolute;
-                // right: 19px;
                 height: 81px;
                 top: 0%;
                 border-radius: 0px 15px 15px 0px;
@@ -187,7 +185,7 @@ h1
                 display: inline-block;
                 right: 0px;
 
-                /* Partie animation ? */
+                /* Partie animation */
                 @keyframes Anim-check {
                     0% {
                         opacity: 1;
@@ -206,7 +204,7 @@ h1
                     align-items: center;
                     height: 100%;
 
-                    /* Partie animation : Où la placer ? */
+                    /* Partie animation */
                     animation: rotate-i 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
                     .fa-check-circle
@@ -224,6 +222,24 @@ h1
                 }
             }
         }
+/* Tentative bouger prix */
+// animation: AnimPrice 1s ease 0s 1 normal forwards;
+.dishes__box:hover .price /* Tentative animation */
+{
+    /* Partie animation ? */
+    // @keyframes AnimPrice {
+    //     0% {
+    //     transform: translateX(0%);
+    //     }
+    
+    //     100% {
+    //     transform: translateX(-23%);
+    //     }
+    // }
+
+    transform: translateX(-450%);
+}
+/* Tentative bouger prix */
         &__menu
         {
             display: flex;
@@ -246,12 +262,38 @@ h1
             }
         }
     }
-
     .button
     {
         @include btn-restaurants;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Footer 
 footer

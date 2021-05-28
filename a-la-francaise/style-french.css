@@ -202,6 +202,8 @@ h1 {
 .restaurant-menus .dishes {
   -webkit-animation: BoxApparition 1s ease 0s 1 normal forwards;
           animation: BoxApparition 1s ease 0s 1 normal forwards;
+  /* Tentative bouger prix */
+  /* Tentative bouger prix */
 }
 
 @-webkit-keyframes BoxRising {
@@ -284,7 +286,7 @@ h1 {
 .restaurant-menus .dishes__box:hover .hidden {
   display: inline-block;
   right: 0px;
-  /* Partie animation ? */
+  /* Partie animation */
 }
 
 @-webkit-keyframes Anim-check {
@@ -324,7 +326,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  /* Partie animation : Où la placer ? */
+  /* Partie animation */
   -webkit-animation: rotate-i 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: rotate-i 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -353,6 +355,12 @@ h1 {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.restaurant-menus .dishes .dishes__box:hover .price {
+  /* Partie animation ? */
+  -webkit-transform: translateX(-450%);
+          transform: translateX(-450%);
 }
 
 .restaurant-menus .dishes__menu {
