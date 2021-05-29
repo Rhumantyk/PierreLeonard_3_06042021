@@ -278,6 +278,7 @@ h1 {
   position: absolute;
   height: 81px;
   top: 0%;
+  right: 1px;
   border-radius: 0px 15px 15px 0px;
   /* Partie animation ? */
   -webkit-animation: Anim-check 1s ease 0s 1 normal forwards;
@@ -286,7 +287,7 @@ h1 {
 
 .restaurant-menus .dishes__box:hover .hidden {
   display: inline-block;
-  right: 0px;
+  right: -1px;
   /* Partie animation */
 }
 
@@ -358,13 +359,23 @@ h1 {
   }
 }
 
+.restaurant-menus .dishes__box:hover .dishes__menu p {
+  width: calc(100% - 78.5px);
+}
+
+.restaurant-menus .dishes__box:hover .dishes__detailed-price p {
+  width: calc(100% - 78.5px);
+}
+
 .restaurant-menus .dishes .dishes__box:hover .price {
   /* Partie animation ? */
-  -webkit-transform: translateX(-80.5px);
-          transform: translateX(-80.5px);
+  -webkit-transform: translateX(-78.5px);
+          transform: translateX(-78.5px);
   /* -380% à l'origine */
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  right: -40%;
+  position: relative;
 }
 
 .restaurant-menus .dishes__menu {
