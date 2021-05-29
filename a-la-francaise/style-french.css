@@ -271,7 +271,8 @@ h1 {
 
 .restaurant-menus .dishes__box .hidden {
   display: none;
-  width: 23%;
+  width: 80.5px;
+  /* 23% à l'origine */
   background-color: #99E2D0;
   color: white;
   position: absolute;
@@ -359,8 +360,11 @@ h1 {
 
 .restaurant-menus .dishes .dishes__box:hover .price {
   /* Partie animation ? */
-  -webkit-transform: translateX(-450%);
-          transform: translateX(-450%);
+  -webkit-transform: translateX(-80.5px);
+          transform: translateX(-80.5px);
+  /* -380% à l'origine */
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .restaurant-menus .dishes__menu {
