@@ -251,10 +251,14 @@ h1
                 }
             }
         }
+        .dishes__box:hover .dishes__menu
+        {
+            padding-right: 78.5px;
+        }
         .dishes__box .price
         {
             /* Tentative bouger prix */
-            animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+            animation: AnimPrice-out 1s ease 0.05s 1 normal forwards;
             /* Partie animation */
             @keyframes AnimPrice-out {
                 0% {
@@ -269,7 +273,7 @@ h1
         .dishes__box:hover .price /* Tentative animation */
         {
             /* Tentative bouger prix */
-            animation: AnimPrice 1s ease 0s 1 normal forwards;
+            animation: AnimPrice 1s ease 0.05s 1 normal forwards;
             /* Partie animation */
             @keyframes AnimPrice {
                 0% {
