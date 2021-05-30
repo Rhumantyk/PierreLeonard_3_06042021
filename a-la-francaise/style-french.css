@@ -277,11 +277,10 @@ h1 {
   top: 0%;
   right: 0px;
   border-radius: 0px 15px 15px 0px;
-  /* Partie animation .hidden ? */
-  -webkit-animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
-          animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
   /* Partie animation .hidden */
-  /* Test transition simple */
+  -webkit-animation: Anim-check-out 1s ease 0s 1 normal forwards;
+          animation: Anim-check-out 1s ease 0s 1 normal forwards;
+  /* Partie animation .hidden */
 }
 
 @-webkit-keyframes Anim-check-out {
@@ -310,10 +309,51 @@ h1 {
   }
 }
 
+.restaurant-menus .dishes__box .hidden i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  /* Partie animation */
+  -webkit-animation: rotate-i-out 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: rotate-i-out 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.restaurant-menus .dishes__box .hidden i .fa-check-circle {
+  /* Partie animation */
+}
+
+@-webkit-keyframes rotate-i-out {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes rotate-i-out {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
 .restaurant-menus .dishes__box:hover .hidden {
   display: inline-block;
   right: -1px;
-  /* Test transition simple */
   /* Partie animation .hidden ? */
   -webkit-animation: Anim-check-in 1s ease 0s 1 normal forwards;
           animation: Anim-check-in 1s ease 0s 1 normal forwards;
@@ -347,16 +387,6 @@ h1 {
 }
 
 .restaurant-menus .dishes__box:hover .hidden i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
   /* Partie animation */
   -webkit-animation: rotate-i 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: rotate-i 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -388,29 +418,66 @@ h1 {
   }
 }
 
-.restaurant-menus .dishes__box:hover .dishes__menu p {
-  width: calc(100% - 78.5px);
+.restaurant-menus .dishes .dishes__box .price {
+  /* Tentative bouger prix */
+  -webkit-animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+          animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+  /* Partie animation */
 }
 
-.restaurant-menus .dishes__box:hover .dishes__detailed-price .price {
-  width: calc(100% - 103.5px);
-  /* 78.5 */
+@-webkit-keyframes AnimPrice-out {
+  0% {
+    -webkit-transform: translateX(-78.5px);
+            transform: translateX(-78.5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
-.restaurant-menus .dishes__box:hover .dishes__detailed-price .p-hide {
-  width: calc(100% - 78.5px);
+@keyframes AnimPrice-out {
+  0% {
+    -webkit-transform: translateX(-78.5px);
+            transform: translateX(-78.5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 .restaurant-menus .dishes .dishes__box:hover .price {
-  -webkit-transform: translateX(-78.5px);
-          transform: translateX(-78.5px);
-  /* -380% à l'origine */
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  right: -40%;
-  position: relative;
+  /* Tentative bouger prix */
+  -webkit-animation: AnimPrice 1s ease 0s 1 normal forwards;
+          animation: AnimPrice 1s ease 0s 1 normal forwards;
+  /* Partie animation */
+}
+
+@-webkit-keyframes AnimPrice {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-78.5px);
+            transform: translateX(-78.5px);
+  }
+}
+
+@keyframes AnimPrice {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-78.5px);
+            transform: translateX(-78.5px);
+  }
+}
+
+.restaurant-menus .dishes .dishes__box:hover .p-hide {
+  padding-right: 79.5px;
 }
 
 .restaurant-menus .dishes__menu {
@@ -537,11 +604,4 @@ footer .fas {
 footer .fa-ustensils, footer .icone-sentence {
   padding-left: 5px;
 }
-
-/* Tablette */
-/* Fin tablette */
-/* Laptop classic */
-/* Fin laptop classic */
-/* Laptop L */
-/* Fin laptop L */
 /*# sourceMappingURL=style-french.css.map */

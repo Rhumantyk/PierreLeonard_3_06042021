@@ -176,8 +176,8 @@ h1
                 right: 0px;
                 border-radius: 0px 15px 15px 0px;
                 
-                /* Partie animation .hidden ? */
-                animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
+                /* Partie animation .hidden */
+                animation: Anim-check-out 1s ease 0s 1 normal forwards;
                 /* Partie animation .hidden */
                 @keyframes Anim-check-out {
                     0% {
@@ -190,18 +190,33 @@ h1
                         transform: translateX(100%);
                     }
                 }
-                
-                /* Test transition simple */
-                // transition: 1s all;
+
+                i
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    /* Partie animation */
+                    animation: rotate-i-out 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    .fa-check-circle
+                    {
+                        /* Partie animation */
+                        @keyframes rotate-i-out {
+                            0% {
+                                transform: rotate(360deg);
+                            }
+                            100% {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
             }
             &:hover .hidden
             {
                 display: inline-block;
                 right: -1px;
-
-                /* Test transition simple */
-                // transform: translateX(0%);
-
                 /* Partie animation .hidden ? */
                 animation: Anim-check-in 1s ease 0s 1 normal forwards;
                 /* Partie animation .hidden */
@@ -218,11 +233,6 @@ h1
                 }
                 i
                 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-
                     /* Partie animation */
                     animation: rotate-i 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
@@ -230,52 +240,50 @@ h1
                     {
                     /* Partie animation */
                     @keyframes rotate-i {
-                        0% {
-                            transform: rotate(90deg);
-                        }
-                        100% {
-                            transform: rotate(360deg);
-                        }
+                            0% {
+                                transform: rotate(90deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
                         }
                     }
                 }
             }
-            &:hover .dishes__menu p
-            {
-                width: calc(100% - 78.5px);
-            }
-
-            &:hover .dishes__detailed-price .price
-            {
-                width: calc(100% - 103.5px); /* 78.5 */
-            }
-
-            &:hover .dishes__detailed-price .p-hide
-            {
-                width: calc(100% - 78.5px);
+        }
+        .dishes__box .price
+        {
+            /* Tentative bouger prix */
+            animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+            /* Partie animation */
+            @keyframes AnimPrice-out {
+                0% {
+                transform: translateX(-78.5px);
+                }
+            
+                100% {
+                transform: translateX(0px);
+                }
             }
         }
         .dishes__box:hover .price /* Tentative animation */
         {
-            // /* Tentative bouger prix */
-            // animation: AnimPrice 1s ease 0s 1 normal forwards;
-            // /* Partie animation */
-            // @keyframes AnimPrice {
-            //     0% {
-            //     transform: translateX(0%);
-            //     }
+            /* Tentative bouger prix */
+            animation: AnimPrice 1s ease 0s 1 normal forwards;
+            /* Partie animation */
+            @keyframes AnimPrice {
+                0% {
+                transform: translateX(0px);
+                }
             
-            //     100% {
-            //     transform: translateX(-23%);
-            //     }
-            // }
-
-            transform: translateX(-78.5px); /* -380% à l'origine */
-            transition-duration: 1s;
-            transition: all 1s;
-            right: -40%;
-            position: relative;
-            // transition-delay: 0.05s;
+                100% {
+                transform: translateX(-78.5px);
+                }
+            }
+        }
+        .dishes__box:hover .p-hide
+        {
+             padding-right: 79.5px; 
         }
         /* Tentative bouger prix */
         &__menu
@@ -306,45 +314,8 @@ h1
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Footer 
 footer
 {
     @include footer;
 }
-
-
-/* Tablette */
-/* Fin tablette */
-
-/* Laptop classic */
-/* Fin laptop classic */
-
-/* Laptop L */
-/* Fin laptop L */
