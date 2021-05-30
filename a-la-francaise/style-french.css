@@ -200,9 +200,6 @@ h1 {
 }
 
 .restaurant-menus .dishes {
-  -webkit-animation: BoxApparition 1s ease 0s 1 normal forwards;
-          animation: BoxApparition 1s ease 0s 1 normal forwards;
-  /* Tentative bouger prix */
   /* Tentative bouger prix */
 }
 
@@ -270,28 +267,60 @@ h1 {
 }
 
 .restaurant-menus .dishes__box .hidden {
-  display: none;
-  width: 80.5px;
+  display: block;
+  width: 78.5px;
   /* 23% à l'origine */
   background-color: #99E2D0;
   color: white;
   position: absolute;
   height: 81px;
   top: 0%;
-  right: 1px;
+  right: 0px;
   border-radius: 0px 15px 15px 0px;
-  /* Partie animation ? */
-  -webkit-animation: Anim-check 1s ease 0s 1 normal forwards;
-          animation: Anim-check 1s ease 0s 1 normal forwards;
+  /* Partie animation .hidden ? */
+  -webkit-animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
+          animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
+  /* Partie animation .hidden */
+  /* Test transition simple */
+}
+
+@-webkit-keyframes Anim-check-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes Anim-check-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 .restaurant-menus .dishes__box:hover .hidden {
   display: inline-block;
   right: -1px;
-  /* Partie animation */
+  /* Test transition simple */
+  /* Partie animation .hidden ? */
+  -webkit-animation: Anim-check-in 1s ease 0s 1 normal forwards;
+          animation: Anim-check-in 1s ease 0s 1 normal forwards;
+  /* Partie animation .hidden */
 }
 
-@-webkit-keyframes Anim-check {
+@-webkit-keyframes Anim-check-in {
   0% {
     opacity: 1;
     -webkit-transform: translateX(100%);
@@ -304,7 +333,7 @@ h1 {
   }
 }
 
-@keyframes Anim-check {
+@keyframes Anim-check-in {
   0% {
     opacity: 1;
     -webkit-transform: translateX(100%);
@@ -363,17 +392,23 @@ h1 {
   width: calc(100% - 78.5px);
 }
 
-.restaurant-menus .dishes__box:hover .dishes__detailed-price p {
+.restaurant-menus .dishes__box:hover .dishes__detailed-price .price {
+  width: calc(100% - 103.5px);
+  /* 78.5 */
+}
+
+.restaurant-menus .dishes__box:hover .dishes__detailed-price .p-hide {
   width: calc(100% - 78.5px);
 }
 
 .restaurant-menus .dishes .dishes__box:hover .price {
-  /* Partie animation ? */
   -webkit-transform: translateX(-78.5px);
           transform: translateX(-78.5px);
   /* -380% à l'origine */
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   right: -40%;
   position: relative;
 }

@@ -98,7 +98,7 @@ h1
 
     .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
     {
-        animation: BoxApparition 1s ease 0s 1 normal forwards;
+        // animation: BoxApparition 1s ease 0s 1 normal forwards;
         @keyframes BoxRising
         {
             0% {
@@ -153,7 +153,6 @@ h1
 
 
 
-
         
         &__box
         {
@@ -164,30 +163,49 @@ h1
                 white-space: nowrap;
             }
             overflow: hidden;
-            @include radius-shadow-box;
+            @include radius-shadow-box; 
             .hidden
             {
-                display: none;
-                width: 80.5px; /* 23% à l'origine */
+                display: block;
+                width: 78.5px; /* 23% à l'origine */
                 background-color: #99E2D0;
                 color: white;
                 position: absolute;
                 height: 81px;
                 top: 0%;
-                right: 1px;
+                right: 0px;
                 border-radius: 0px 15px 15px 0px;
-
-                /* Partie animation ? */
-                animation: Anim-check 1s ease 0s 1 normal forwards;
                 
+                /* Partie animation .hidden ? */
+                animation: Anim-check-out 1s ease-out 0s 1 normal forwards;
+                /* Partie animation .hidden */
+                @keyframes Anim-check-out {
+                    0% {
+                        opacity: 1;
+                        transform: translateX(0%);
+                    }
+                    
+                    100% {
+                        opacity: 1;
+                        transform: translateX(100%);
+                    }
+                }
+                
+                /* Test transition simple */
+                // transition: 1s all;
             }
             &:hover .hidden
             {
                 display: inline-block;
                 right: -1px;
 
-                /* Partie animation */
-                @keyframes Anim-check {
+                /* Test transition simple */
+                // transform: translateX(0%);
+
+                /* Partie animation .hidden ? */
+                animation: Anim-check-in 1s ease 0s 1 normal forwards;
+                /* Partie animation .hidden */
+                @keyframes Anim-check-in {
                     0% {
                         opacity: 1;
                         transform: translateX(100%);
@@ -227,16 +245,21 @@ h1
                 width: calc(100% - 78.5px);
             }
 
-            &:hover .dishes__detailed-price p
+            &:hover .dishes__detailed-price .price
+            {
+                width: calc(100% - 103.5px); /* 78.5 */
+            }
+
+            &:hover .dishes__detailed-price .p-hide
             {
                 width: calc(100% - 78.5px);
             }
         }
-        /* Tentative bouger prix */
-        // animation: AnimPrice 1s ease 0s 1 normal forwards;
         .dishes__box:hover .price /* Tentative animation */
         {
-            /* Partie animation ? */
+            // /* Tentative bouger prix */
+            // animation: AnimPrice 1s ease 0s 1 normal forwards;
+            // /* Partie animation */
             // @keyframes AnimPrice {
             //     0% {
             //     transform: translateX(0%);
@@ -249,6 +272,7 @@ h1
 
             transform: translateX(-78.5px); /* -380% à l'origine */
             transition-duration: 1s;
+            transition: all 1s;
             right: -40%;
             position: relative;
             // transition-delay: 0.05s;
