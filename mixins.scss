@@ -210,7 +210,6 @@ $breakpoints: ( /* Utiliser max-witdth */
     background-color: #f5f5f5;    
 }
 
-$gradiant: linear-gradient(#9356DC, #FF79DA);
 @mixin fa-heart /* Pour toutes les pages */
 {
     display: flex;
@@ -221,24 +220,14 @@ $gradiant: linear-gradient(#9356DC, #FF79DA);
     background-color: transparent;
     color: white;
     -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
     &:hover
     {
-        // color: linear-gradient(#9356DC, #FF79DA); /*Erreur CSS W3C*/
-        // background: linear-gradient(#9356DC, #FF79DA); /* +++ */
-        // background-clip: text;
-        
-        // -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 0px black;
-
-        /* Pour Chrome */
-        // text-shadow: 0px 0px 0px $gradiant;
-        // background: -webkit-linear-gradient (#9356DC, #FF79DA);
-        // background: -moz-linear-gradient (#9356DC, #FF79DA);
-
         background: -webkit-linear-gradient(#9356DC, #FF79DA);
         background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

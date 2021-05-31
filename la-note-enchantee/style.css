@@ -414,11 +414,11 @@ h1 {
   background-color: transparent;
   color: white;
   -webkit-text-stroke: 1px black;
+  -webkit-background-clip: text;
 }
 
 .restaurant-menus .restaurant i:hover {
   -webkit-text-stroke: 0px black;
-  /* Pour Chrome */
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
