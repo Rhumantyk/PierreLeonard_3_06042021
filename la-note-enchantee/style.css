@@ -417,12 +417,12 @@ h1 {
 }
 
 .restaurant-menus .restaurant i:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
-  /* +++ */
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px black;
+  /* Pour Chrome */
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .restaurant-menus .restaurant h1 {
