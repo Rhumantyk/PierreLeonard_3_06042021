@@ -23,6 +23,7 @@
 
 body
 {
+    @include loader;
 	@include body;
 }
 

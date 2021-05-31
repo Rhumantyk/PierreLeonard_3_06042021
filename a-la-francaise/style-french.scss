@@ -259,6 +259,7 @@ h1
         {
             /* Tentative bouger prix */
             animation: AnimPrice-out 1s ease 0.05s 1 normal forwards;
+            // transition: transform 1s;
             /* Partie animation */
             @keyframes AnimPrice-out {
                 0% {
@@ -274,6 +275,7 @@ h1
         {
             /* Tentative bouger prix */
             animation: AnimPrice 1s ease 0.05s 1 normal forwards;
+            transition: ease 1s;
             /* Partie animation */
             @keyframes AnimPrice {
                 0% {

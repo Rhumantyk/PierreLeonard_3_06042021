@@ -455,6 +455,8 @@ h1 {
   /* Tentative bouger prix */
   -webkit-animation: AnimPrice 1s ease 0.05s 1 normal forwards;
           animation: AnimPrice 1s ease 0.05s 1 normal forwards;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
   /* Partie animation */
 }
 
