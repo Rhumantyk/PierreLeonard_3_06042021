@@ -99,7 +99,7 @@ h1
 
     .dishes /* Les esperluettes à renomer. Uniquement les pseudoclasses avec & */
     {
-        animation: BoxApparition 1s ease 0s 1 normal forwards;
+        // animation: BoxApparition 1s ease 0s 1 normal forwards;
         @keyframes BoxRising
         {
             0% {
@@ -130,97 +130,130 @@ h1
         {
             animation: BoxRising 1s ease .8s 1 normal forwards;
         }
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         &__box
-        {  
-
-            @include radius-shadow-box;
+        {
+            p
+            {
+                @include text-ellipsis;
+            }
+            @include overflow-dishes__box;
+            @include radius-shadow-box; 
             .hidden
             {
-                display: none;
-                // display: flex;
-                width: 23%;
-                background-color: #99E2D0;
-                color: white;
-                position: absolute;
-                right: 19px;
-                height: 81px;
-                top: 0%;
-                border-radius: 0px 15px 15px 0px;
-
-                /* Partie animation ? */
-                animation: Anim-check 1s ease 0s 1 normal forwards;
+                @include hidden-set-up;
                 
-            }
-            &:hover .hidden
-            {
-                display: inline-block;
-                right: 0px;
-
-                /* Partie animation ? */
-                @keyframes Anim-check {
+                /* Partie animation .hidden */
+                animation: Anim-check-out 1s ease 0s 1 normal forwards;
+                /* Partie animation .hidden */
+                @keyframes Anim-check-out {
                     0% {
-                        opacity: 0;
-                        transform: translateX(250px);
+                        opacity: 1;
+                        transform: translateX(0%);
                     }
                     
                     100% {
                         opacity: 1;
-                        transform: translateX(0);
+                        transform: translateX(100%);
                     }
                 }
                 i
                 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-
-                    /* Partie animation : Où la placer ? */
-                    animation: rotate-i 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    @include fonts-hidden-set-up;
+                    /* Partie animation */
+                    animation: rotate-i-out 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    .fa-check-circle
+                    {
+                        /* Partie animation */
+                        @keyframes rotate-i-out {
+                            0% {
+                                transform: rotate(360deg);
+                            }
+                            100% {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover .hidden
+            {
+                @include hover-hidden-set-up;
+                /* Partie animation .hidden ? */
+                animation: Anim-check-in 1s ease 0s 1 normal forwards;
+                /* Partie animation .hidden */
+                @keyframes Anim-check-in {
+                    0% {
+                        opacity: 1;
+                        transform: translateX(100%);
+                    }
+                    
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0%);
+                    }
+                }
+                i
+                {
+                    /* Partie animation */
+                    animation: rotate-i 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
                     .fa-check-circle
                     {
                     /* Partie animation */
                     @keyframes rotate-i {
-                        0% {
-                            transform: rotate(0);
-                        }
-                        100% {
-                            transform: rotate(180deg);
-                        }
+                            0% {
+                                transform: rotate(90deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
                         }
                     }
                 }
             }
         }
+        .dishes__box:hover .dishes__menu
+        {
+            @include hover-dishes__menu;
+        }
+        .dishes__box .price
+        {
+            /* Tentative bouger prix */
+            animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+            /* Partie animation */
+            @keyframes AnimPrice-out {
+                0% {
+                transform: translateX(-78.5px);
+                }
+            
+                100% {
+                transform: translateX(0px);
+                }
+            }
+        }
+        .dishes__box:hover .price /* Tentative animation */
+        {
+            /* Tentative bouger prix */
+            animation: AnimPrice 1s ease 0.05s 1 normal forwards;
+            transition: ease 1s;
+            /* Partie animation */
+            @keyframes AnimPrice {
+                0% {
+                transform: translateX(0px);
+                }
+            
+                100% {
+                transform: translateX(-78.5px);
+                }
+            }
+        }
+        .dishes__box:hover .p-hide
+        {
+            @include hover-p-hide; 
+        }
         &__menu
         {
+            @include dishes-menu-set-up;
             @include radius-shadow-menu;
             p
             {
@@ -230,12 +263,19 @@ h1
         &__detailed-price
         {
             @include radius-shadow-detailed-price;
+            p:nth-child(2)
+            {
+               @include overflow-p-detailed-price; 
+            }  
         }
     }
-
-    .button
+    .placement-btn
     {
-        @include btn-restaurants;
+        @include btn-place;
+        .button
+        {
+            @include btn-restaurants;
+        }
     }
 }
 
@@ -244,13 +284,3 @@ footer
 {
     @include footer;
 }
-
-
-/* Tablette */
-/* Fin tablette */
-
-/* Laptop classic */
-/* Fin laptop classic */
-
-/* Laptop L */
-/* Fin laptop L */
