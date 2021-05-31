@@ -673,8 +673,8 @@ h1 {
 
 .restaurant-menus .dishes .dishes__box .price {
   /* Tentative bouger prix */
-  -webkit-animation: AnimPrice-out 1s ease 0.05s 1 normal forwards;
-          animation: AnimPrice-out 1s ease 0.05s 1 normal forwards;
+  -webkit-animation: AnimPrice-out 1s ease 0s 1 normal forwards;
+          animation: AnimPrice-out 1s ease 0s 1 normal forwards;
   /* Partie animation */
 }
 

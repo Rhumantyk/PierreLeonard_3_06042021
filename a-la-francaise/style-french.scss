@@ -259,7 +259,7 @@ h1
         .dishes__box .price
         {
             /* Tentative bouger prix */
-            animation: AnimPrice-out 1s ease 0.05s 1 normal forwards;
+            animation: AnimPrice-out 1s ease 0s 1 normal forwards;
             // transition: transform 1s;
             /* Partie animation */
             @keyframes AnimPrice-out {
