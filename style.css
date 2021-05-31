@@ -415,7 +415,7 @@ p {
 h1 {
   padding-left: 5%;
   /* En px ou % ? */
-  padding-top: 7%;
+  padding-top: 2%;
   margin-bottom: -2%;
 }
 
@@ -590,7 +590,6 @@ h1 {
 }
 
 .restaurants i:hover {
-  color: linear-gradient(#9356DC, #FF79DA);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   /* +++ */
@@ -776,7 +775,7 @@ h1 {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-top: 13%;
+    margin-top: 2%;
   }
   .restaurants h1 {
     width: 100%;

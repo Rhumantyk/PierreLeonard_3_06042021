@@ -222,7 +222,7 @@ $breakpoints: ( /* Utiliser max-witdth */
     -webkit-text-stroke: 1px black;
     &:hover
     {
-        color: linear-gradient(#9356DC, #FF79DA);
+        // color: linear-gradient(#9356DC, #FF79DA); /*Erreur CSS W3C*/
         background: linear-gradient(#9356DC, #FF79DA); /* +++ */
         background-clip: text;
         
