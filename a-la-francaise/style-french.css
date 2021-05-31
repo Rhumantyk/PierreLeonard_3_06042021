@@ -448,10 +448,6 @@ h1 {
   font-weight: lighter;
 }
 
-.restaurant-menus .dishes {
-  /* Tentative bouger prix */
-}
-
 @-webkit-keyframes BoxRising {
   0% {
     opacity: 0;
@@ -518,7 +514,6 @@ h1 {
 .restaurant-menus .dishes__box .hidden {
   display: block;
   width: 78.5px;
-  /* 23% à l'origine */
   background-color: #99E2D0;
   color: white;
   position: absolute;

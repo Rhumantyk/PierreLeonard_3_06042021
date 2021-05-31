@@ -172,6 +172,18 @@
     font-weight: lighter;
 }
 
+@mixin text-ellipsis
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin overflow-dishes__box 
+{
+    overflow: hidden;
+}
+
 @mixin radius-shadow-box
 {
     border-radius: 15px; 
@@ -180,6 +192,50 @@
     padding-right: 6%;
     background-color: white;
     margin-bottom: 4%;
+}
+
+@mixin  hidden-set-up
+{
+    display: block;
+    width: 78.5px;
+    background-color: #99E2D0;
+    color: white;
+    position: absolute;
+    height: 81px;
+    top: 0%;
+    right: 0px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+@mixin fonts-hidden-set-up
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@mixin hover-hidden-set-up
+{
+    display: inline-block;
+    right: -1px;
+}
+
+@mixin hover-dishes__menu
+{
+    padding-right: 78.5px;
+}
+
+@mixin hover-p-hide
+{
+    padding-right: 79.5px;
+}
+
+@mixin dishes-menu-set-up 
+{
+    display: flex;
+    flex-direction: row; /* Les 3 servent à activer overflow ellipsis */
+    flex-wrap: wrap;
 }
 
 @mixin radius-shadow-menu
@@ -197,8 +253,22 @@
     justify-content: space-between;
 }
 
+@mixin overflow-p-detailed-price
+{
+    overflow: visible;
+    text-overflow: inherit;
+    // white-space: none; /*Erreur W3C CSS //
+}
+
+@mixin btn-place 
+{
+    display: flex;
+    justify-content: center;
+}
+
 @mixin placement-btn 
 {
+
     @media screen and (min-width: map-get($breakpoints, mobile-large))
     {
         display: flex;

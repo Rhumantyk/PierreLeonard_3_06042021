@@ -130,52 +130,17 @@ h1
         {
             animation: BoxRising 1s ease .8s 1 normal forwards;
         }
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         &__box
         {
             p
             {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+                @include text-ellipsis;
             }
-            overflow: hidden;
+            @include overflow-dishes__box;
             @include radius-shadow-box; 
             .hidden
             {
-                display: block;
-                width: 78.5px; /* 23% à l'origine */
-                background-color: #99E2D0;
-                color: white;
-                position: absolute;
-                height: 81px;
-                top: 0%;
-                right: 0px;
-                border-radius: 0px 15px 15px 0px;
+                @include hidden-set-up;
                 
                 /* Partie animation .hidden */
                 animation: Anim-check-out 1s ease 0s 1 normal forwards;
@@ -191,13 +156,9 @@ h1
                         transform: translateX(100%);
                     }
                 }
-
                 i
                 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
+                    @include fonts-hidden-set-up;
                     /* Partie animation */
                     animation: rotate-i-out 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                     .fa-check-circle
@@ -216,8 +177,7 @@ h1
             }
             &:hover .hidden
             {
-                display: inline-block;
-                right: -1px;
+                @include hover-hidden-set-up;
                 /* Partie animation .hidden ? */
                 animation: Anim-check-in 1s ease 0s 1 normal forwards;
                 /* Partie animation .hidden */
@@ -254,13 +214,12 @@ h1
         }
         .dishes__box:hover .dishes__menu
         {
-            padding-right: 78.5px;
+            @include hover-dishes__menu;
         }
         .dishes__box .price
         {
             /* Tentative bouger prix */
             animation: AnimPrice-out 1s ease 0s 1 normal forwards;
-            // transition: transform 1s;
             /* Partie animation */
             @keyframes AnimPrice-out {
                 0% {
@@ -290,14 +249,11 @@ h1
         }
         .dishes__box:hover .p-hide
         {
-             padding-right: 79.5px; 
+            @include hover-p-hide; 
         }
-        /* Tentative bouger prix */
         &__menu
         {
-            display: flex;
-            flex-direction: row; /* Les 3 servent à activer overflow ellipsis */
-            flex-wrap: wrap;
+            @include dishes-menu-set-up;
             @include radius-shadow-menu;
             p
             {
@@ -309,16 +265,13 @@ h1
             @include radius-shadow-detailed-price;
             p:nth-child(2)
             {
-                overflow: visible;
-                text-overflow: inherit;
-                // white-space: none; /*Erreur W3C CSS //
+               @include overflow-p-detailed-price; 
             }  
         }
     }
     .placement-btn
     {
-        display: flex;
-        justify-content: center;
+        @include btn-place;
         .button
         {
             @include btn-restaurants;
