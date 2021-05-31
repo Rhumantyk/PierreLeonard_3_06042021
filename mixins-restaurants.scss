@@ -197,6 +197,15 @@
     justify-content: space-between;
 }
 
+@mixin placement-btn 
+{
+    @media screen and (min-width: map-get($breakpoints, mobile-large))
+    {
+        display: flex;
+        justify-content: center;
+    }    
+}
+
 @mixin btn-restaurants
 {
     display: flex;
@@ -213,6 +222,16 @@
     cursor: pointer;
     margin-top: 12%;
     margin-bottom: 20%;
+    @media screen and (min-width: map-get($breakpoints, mobile-large))
+    {
+        width: 43%;
+        padding: 2% 0%;
+    }
+    @media screen and (min-width: map-get($breakpoints, tablet))
+    {
+        width: 35%;
+        padding: 2% 0%;
+    }
     &:hover
     {
         filter: brightness(1.05);

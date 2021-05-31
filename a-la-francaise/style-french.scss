@@ -315,9 +315,14 @@ h1
             }  
         }
     }
-    .button
+    .placement-btn
     {
-        @include btn-restaurants;
+        display: flex;
+        justify-content: center;
+        .button
+        {
+            @include btn-restaurants;
+        }
     }
 }
 

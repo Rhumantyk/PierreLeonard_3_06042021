@@ -776,7 +776,16 @@ h1 {
   text-overflow: inherit;
 }
 
-.restaurant-menus .button {
+.restaurant-menus .placement-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.restaurant-menus .placement-btn .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,7 +808,21 @@ h1 {
   margin-bottom: 20%;
 }
 
-.restaurant-menus .button:hover {
+@media screen and (min-width: 426px) {
+  .restaurant-menus .placement-btn .button {
+    width: 43%;
+    padding: 2% 0%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .restaurant-menus .placement-btn .button {
+    width: 35%;
+    padding: 2% 0%;
+  }
+}
+
+.restaurant-menus .placement-btn .button:hover {
   -webkit-filter: brightness(1.05);
           filter: brightness(1.05);
   -webkit-box-shadow: 3px 3px 3px 3px rgba(128, 128, 128, 0.22);
