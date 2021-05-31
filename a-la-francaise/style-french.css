@@ -361,6 +361,7 @@ aside img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  max-height: 650px;
 }
 
 h1 {
