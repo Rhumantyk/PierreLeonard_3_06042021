@@ -220,12 +220,12 @@ $breakpoints: ( /* Utiliser max-witdth */
     background-color: transparent;
     color: white;
     -webkit-text-stroke: 1px black;
-    -webkit-background-clip: text;
+    // -webkit-background-clip: text;
     &:hover
     {
         -webkit-text-stroke: 0px black;
         background: -webkit-linear-gradient(#9356DC, #FF79DA);
-        background-clip: text;
+        // background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
