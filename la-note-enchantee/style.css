@@ -184,8 +184,8 @@ body .loader-bg {
   left: 0;
   bottom: 0;
   right: 0;
-  -webkit-animation: fadeOut 1.5s;
-          animation: fadeOut 1.5s;
+  -webkit-animation: fadeOut 2.5s;
+          animation: fadeOut 2.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -416,7 +416,6 @@ h1 {
   background-color: transparent;
   color: white;
   -webkit-text-stroke: 1px black;
-  -webkit-background-clip: text;
 }
 
 .restaurant-menus .restaurant i:hover {
